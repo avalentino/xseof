@@ -37,20 +37,6 @@ xsdata download -o EE_CFI_SCHEMAS http://eop-cfi.esa.int/CFI/EE_CFI_SCHEMAS/EO_O
 xsdata download -o EE_CFI_SCHEMAS http://eop-cfi.esa.int/CFI/EE_CFI_SCHEMAS/EO_OPER_AUX_ORBRES_0203.XSD
 xsdata download -o EE_CFI_SCHEMAS http://eop-cfi.esa.int/CFI/EE_CFI_SCHEMAS/EO_OPER_AUX_ORBRES_0300.XSD
 
-# xsdata download -o EE_CFI_SCHEMAS http://eop-cfi.esa.int/CFI/EE_CFI_SCHEMAS/EO_OPER_INT_ATTDEF_0101.XSD
-# xsdata download -o EE_CFI_SCHEMAS http://eop-cfi.esa.int/CFI/EE_CFI_SCHEMAS/EO_OPER_INT_ATTDEF_0102.XSD
-# xsdata download -o EE_CFI_SCHEMAS http://eop-cfi.esa.int/CFI/EE_CFI_SCHEMAS/EO_OPER_INT_ATTDEF_0103.XSD
-xsdata download -o EE_CFI_SCHEMAS http://eop-cfi.esa.int/CFI/EE_CFI_SCHEMAS/EO_OPER_INT_ATTDEF_0104.XSD
-# xsdata download -o EE_CFI_SCHEMAS http://eop-cfi.esa.int/CFI/EE_CFI_SCHEMAS/EO_OPER_INT_ATTDEF_0200.XSD
-# xsdata download -o EE_CFI_SCHEMAS http://eop-cfi.esa.int/CFI/EE_CFI_SCHEMAS/EO_OPER_INT_ATTDEF_0201.XSD
-# xsdata download -o EE_CFI_SCHEMAS http://eop-cfi.esa.int/CFI/EE_CFI_SCHEMAS/EO_OPER_INT_ATTDEF_0202.XSD
-# xsdata download -o EE_CFI_SCHEMAS http://eop-cfi.esa.int/CFI/EE_CFI_SCHEMAS/EO_OPER_INT_ATTDEF_0203.XSD
-# xsdata download -o EE_CFI_SCHEMAS http://eop-cfi.esa.int/CFI/EE_CFI_SCHEMAS/EO_OPER_INT_ATTDEF_0204.XSD
-xsdata download -o EE_CFI_SCHEMAS http://eop-cfi.esa.int/CFI/EE_CFI_SCHEMAS/EO_OPER_INT_ATTDEF_0205.XSD
-# xsdata download -o EE_CFI_SCHEMAS http://eop-cfi.esa.int/CFI/EE_CFI_SCHEMAS/EO_OPER_INT_ATTDEF_0300.XSD
-# xsdata download -o EE_CFI_SCHEMAS http://eop-cfi.esa.int/CFI/EE_CFI_SCHEMAS/EO_OPER_INT_ATTDEF_0301.XSD
-xsdata download -o EE_CFI_SCHEMAS http://eop-cfi.esa.int/CFI/EE_CFI_SCHEMAS/EO_OPER_INT_ATTDEF_0302.XSD
-
 # xsdata download -o EE_CFI_SCHEMAS http://eop-cfi.esa.int/CFI/EE_CFI_SCHEMAS/EO_OPER_INT_ATTREF_0101.XSD
 # xsdata download -o EE_CFI_SCHEMAS http://eop-cfi.esa.int/CFI/EE_CFI_SCHEMAS/EO_OPER_INT_ATTREF_0102.XSD
 # xsdata download -o EE_CFI_SCHEMAS http://eop-cfi.esa.int/CFI/EE_CFI_SCHEMAS/EO_OPER_INT_ATTREF_0103.XSD
