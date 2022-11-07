@@ -64,6 +64,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+_venv
 
 # Spyder project settings
 .spyderproject
@@ -77,3 +78,5 @@ venv.bak/
 
 # misc
 *~
+/EE_CFI_SCHEMAS
+/data
