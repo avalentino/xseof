@@ -1,0 +1,1707 @@
+<?xml version="1.0"?>
+<Earth_Explorer_File xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://eop-cfi.esa.int/CFI http://eop-cfi.esa.int/CFI/EE_CFI_SCHEMAS/EO_OPER_INT_ATTREF_0203.XSD" schemaVersion="2.3" xmlns="http://eop-cfi.esa.int/CFI">
+  <Earth_Explorer_Header>
+    <Fixed_Header>
+      <File_Name>S1A_TEST_INT_ATTREF_20140611T104016_20140611T123846_0004</File_Name>
+      <File_Description>Attitude File</File_Description>
+      <Notes>
+               WARNING: this is an example of file compliant with formats defined and supported
+                        within the Earth Observation Mission CFI Software.
+                        This file does not reflect the actual satellite orbit
+                        attitude or instrument configuration.
+                        This file shall not be used in production environments.
+      </Notes>
+      <Mission>Sentinel1A</Mission>
+      <File_Class>TEST</File_Class>
+      <File_Type>INT_ATTREF</File_Type>
+      <Validity_Period>
+        <Validity_Start>UTC=2014-06-11T10:40:16</Validity_Start>
+        <Validity_Stop>UTC=2014-06-11T12:38:46</Validity_Stop>
+      </Validity_Period>
+      <File_Version>0004</File_Version>
+      <Source>
+        <System>System Identification as per Ground Segment File Format Standard (PE-TN-ESA-GS-0001)</System>
+        <Creator>Creator Identification as per Ground Segment File Format Standard (PE-TN-ESA-GS-0001)</Creator>
+        <Creator_Version>Creator Version Identification as per Ground Segment File Format Standard (PE-TN-ESA-GS-0001)</Creator_Version>
+        <Creation_Date>UTC=2015-01-01T00:00:00</Creation_Date>
+      </Source>
+    </Fixed_Header>
+    <Variable_Header/>
+  </Earth_Explorer_Header>
+  <Data_Block type="xml">
+    <Attitude_File_Type>Sat_Nominal_Attitude</Attitude_File_Type>
+    <Attitude_Data_Type>Quaternions</Attitude_Data_Type>
+    <Max_Gap unit="s">200.000000</Max_Gap>
+    <Quaternion_Data>
+      <Reference_Frame>EARTH_FIXED</Reference_Frame>
+      <List_of_Quaternions count="238">
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:40:15.855382</Time>
+          <Q1>0.885506447</Q1>
+          <Q2>0.098371412</Q2>
+          <Q3>-0.151937500</Q3>
+          <Q4>-0.427921014</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:40:45.855382</Time>
+          <Q1>0.878632093</Q1>
+          <Q2>0.094808219</Q2>
+          <Q3>-0.154045603</Q3>
+          <Q4>-0.441912886</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:41:15.855382</Time>
+          <Q1>0.871522526</Q1>
+          <Q2>0.091270015</Q2>
+          <Q3>-0.156089486</Q3>
+          <Q4>-0.455800773</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:41:45.855382</Time>
+          <Q1>0.864179710</Q1>
+          <Q2>0.087758393</Q2>
+          <Q3>-0.158067266</Q3>
+          <Q4>-0.469581337</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:42:15.855382</Time>
+          <Q1>0.856605691</Q1>
+          <Q2>0.084274859</Q2>
+          <Q3>-0.159977074</Q3>
+          <Q4>-0.483251254</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:42:45.855382</Time>
+          <Q1>0.848802585</Q1>
+          <Q2>0.080820826</Q2>
+          <Q3>-0.161817056</Q3>
+          <Q4>-0.496807212</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:43:15.855382</Time>
+          <Q1>0.840772586</Q1>
+          <Q2>0.077397618</Q2>
+          <Q3>-0.163585382</Q3>
+          <Q4>-0.510245911</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:43:45.855382</Time>
+          <Q1>0.832517959</Q1>
+          <Q2>0.074006467</Q2>
+          <Q3>-0.165280245</Q3>
+          <Q4>-0.523564066</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:44:15.855382</Time>
+          <Q1>0.824041040</Q1>
+          <Q2>0.070648513</Q2>
+          <Q3>-0.166899869</Q3>
+          <Q4>-0.536758405</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:44:45.855382</Time>
+          <Q1>0.815344237</Q1>
+          <Q2>0.067324804</Q2>
+          <Q3>-0.168442509</Q3>
+          <Q4>-0.549825669</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:45:15.855382</Time>
+          <Q1>0.806430026</Q1>
+          <Q2>0.064036297</Q2>
+          <Q3>-0.169906463</Q3>
+          <Q4>-0.562762614</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:45:45.855382</Time>
+          <Q1>0.797300950</Q1>
+          <Q2>0.060783856</Q2>
+          <Q3>-0.171290067</Q3>
+          <Q4>-0.575566009</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:46:15.855382</Time>
+          <Q1>0.787959619</Q1>
+          <Q2>0.057568255</Q2>
+          <Q3>-0.172591705</Q3>
+          <Q4>-0.588232639</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:46:45.855382</Time>
+          <Q1>0.778408706</Q1>
+          <Q2>0.054390177</Q2>
+          <Q3>-0.173809813</Q3>
+          <Q4>-0.600759306</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:47:15.855382</Time>
+          <Q1>0.768650947</Q1>
+          <Q2>0.051250217</Q2>
+          <Q3>-0.174942880</Q3>
+          <Q4>-0.613142826</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:47:45.855382</Time>
+          <Q1>0.758689140</Q1>
+          <Q2>0.048148881</Q2>
+          <Q3>-0.175989455</Q3>
+          <Q4>-0.625380033</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:48:15.855382</Time>
+          <Q1>-0.748526142</Q1>
+          <Q2>-0.045086590</Q2>
+          <Q3>0.176948149</Q3>
+          <Q4>0.637467777</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:48:45.855382</Time>
+          <Q1>-0.738164868</Q1>
+          <Q2>-0.042063677</Q2>
+          <Q3>0.177817642</Q3>
+          <Q4>0.649402926</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:49:15.855382</Time>
+          <Q1>-0.727608289</Q1>
+          <Q2>-0.039080394</Q2>
+          <Q3>0.178596681</Q3>
+          <Q4>0.661182370</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:49:45.855382</Time>
+          <Q1>-0.716859430</Q1>
+          <Q2>-0.036136913</Q2>
+          <Q3>0.179284089</Q3>
+          <Q4>0.672803014</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:50:15.855382</Time>
+          <Q1>-0.705921370</Q1>
+          <Q2>-0.033233325</Q2>
+          <Q3>0.179878769</Q3>
+          <Q4>0.684261788</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:50:45.855382</Time>
+          <Q1>-0.694797236</Q1>
+          <Q2>-0.030369645</Q2>
+          <Q3>0.180379703</Q3>
+          <Q4>0.695555640</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:51:15.855382</Time>
+          <Q1>-0.683490207</Q1>
+          <Q2>-0.027545816</Q2>
+          <Q3>0.180785956</Q3>
+          <Q4>0.706681542</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:51:45.855382</Time>
+          <Q1>-0.672003509</Q1>
+          <Q2>-0.024761708</Q2>
+          <Q3>0.181096684</Q3>
+          <Q4>0.717636491</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:52:15.855382</Time>
+          <Q1>-0.660340412</Q1>
+          <Q2>-0.022017124</Q2>
+          <Q3>0.181311131</Q3>
+          <Q4>0.728417504</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:52:45.855383</Time>
+          <Q1>-0.648504229</Q1>
+          <Q2>-0.019311801</Q2>
+          <Q3>0.181428636</Q3>
+          <Q4>0.739021629</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:53:15.855383</Time>
+          <Q1>-0.636498319</Q1>
+          <Q2>-0.016645417</Q2>
+          <Q3>0.181448633</Q3>
+          <Q4>0.749445938</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:53:45.855383</Time>
+          <Q1>-0.624326076</Q1>
+          <Q2>-0.014017588</Q2>
+          <Q3>0.181370654</Q3>
+          <Q4>0.759687531</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:54:15.855383</Time>
+          <Q1>-0.611990935</Q1>
+          <Q2>-0.011427877</Q2>
+          <Q3>0.181194331</Q3>
+          <Q4>0.769743537</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:54:45.855383</Time>
+          <Q1>-0.599496368</Q1>
+          <Q2>-0.008875796</Q2>
+          <Q3>0.180919401</Q3>
+          <Q4>0.779611118</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:55:15.855383</Time>
+          <Q1>-0.586845881</Q1>
+          <Q2>-0.006360808</Q2>
+          <Q3>0.180545701</Q3>
+          <Q4>0.789287465</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:55:45.855383</Time>
+          <Q1>-0.574043011</Q1>
+          <Q2>-0.003882334</Q2>
+          <Q3>0.180073178</Q3>
+          <Q4>0.798769804</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:56:15.855383</Time>
+          <Q1>-0.561091330</Q1>
+          <Q2>-0.001439752</Q2>
+          <Q3>0.179501882</Q3>
+          <Q4>0.808055395</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:56:45.855383</Time>
+          <Q1>-0.547994437</Q1>
+          <Q2>0.000967593</Q2>
+          <Q3>0.178831974</Q3>
+          <Q4>0.817141534</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:57:15.855383</Time>
+          <Q1>-0.534755960</Q1>
+          <Q2>0.003340389</Q2>
+          <Q3>0.178063722</Q3>
+          <Q4>0.826025554</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:57:45.855383</Time>
+          <Q1>-0.521379553</Q1>
+          <Q2>0.005679355</Q2>
+          <Q3>0.177197505</Q3>
+          <Q4>0.834704828</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:58:15.855383</Time>
+          <Q1>-0.507868896</Q1>
+          <Q2>0.007985230</Q2>
+          <Q3>0.176233810</Q3>
+          <Q4>0.843176770</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:58:45.855383</Time>
+          <Q1>-0.494227690</Q1>
+          <Q2>0.010258778</Q2>
+          <Q3>0.175173235</Q3>
+          <Q4>0.851438833</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:59:15.855383</Time>
+          <Q1>-0.480459659</Q1>
+          <Q2>0.012500775</Q2>
+          <Q3>0.174016487</Q3>
+          <Q4>0.859488516</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T10:59:45.855383</Time>
+          <Q1>-0.466568549</Q1>
+          <Q2>0.014712012</Q2>
+          <Q3>0.172764386</Q3>
+          <Q4>0.867323361</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:00:15.855383</Time>
+          <Q1>-0.452558121</Q1>
+          <Q2>0.016893288</Q2>
+          <Q3>0.171417855</Q3>
+          <Q4>0.874940960</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:00:45.855383</Time>
+          <Q1>-0.438432156</Q1>
+          <Q2>0.019045406</Q2>
+          <Q3>0.169977931</Q3>
+          <Q4>0.882338948</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:01:15.855383</Time>
+          <Q1>-0.424194452</Q1>
+          <Q2>0.021169170</Q2>
+          <Q3>0.168445755</Q3>
+          <Q4>0.889515014</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:01:45.855383</Time>
+          <Q1>-0.409848820</Q1>
+          <Q2>0.023265380</Q2>
+          <Q3>0.166822575</Q3>
+          <Q4>0.896466896</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:02:15.855383</Time>
+          <Q1>-0.395399084</Q1>
+          <Q2>0.025334831</Q2>
+          <Q3>0.165109743</Q3>
+          <Q4>0.903192384</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:02:45.855383</Time>
+          <Q1>-0.380849083</Q1>
+          <Q2>0.027378306</Q2>
+          <Q3>0.163308715</Q3>
+          <Q4>0.909689325</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:03:15.855383</Time>
+          <Q1>-0.366202665</Q1>
+          <Q2>0.029396573</Q2>
+          <Q3>0.161421047</Q3>
+          <Q4>0.915955618</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:03:45.855383</Time>
+          <Q1>-0.351463690</Q1>
+          <Q2>0.031390384</Q2>
+          <Q3>0.159448394</Q3>
+          <Q4>0.921989223</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:04:15.855383</Time>
+          <Q1>-0.336636025</Q1>
+          <Q2>0.033360469</Q2>
+          <Q3>0.157392510</Q3>
+          <Q4>0.927788156</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:04:45.855383</Time>
+          <Q1>-0.321723547</Q1>
+          <Q2>0.035307535</Q2>
+          <Q3>0.155255240</Q3>
+          <Q4>0.933350496</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:05:15.855383</Time>
+          <Q1>-0.306730140</Q1>
+          <Q2>0.037232259</Q2>
+          <Q3>0.153038523</Q3>
+          <Q4>0.938674380</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:05:45.855383</Time>
+          <Q1>-0.291659691</Q1>
+          <Q2>0.039135290</Q2>
+          <Q3>0.150744387</Q3>
+          <Q4>0.943758011</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:06:15.855383</Time>
+          <Q1>-0.276516096</Q1>
+          <Q2>0.041017240</Q2>
+          <Q3>0.148374946</Q3>
+          <Q4>0.948599657</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:06:45.855383</Time>
+          <Q1>-0.261303255</Q1>
+          <Q2>0.042878690</Q2>
+          <Q3>0.145932397</Q3>
+          <Q4>0.953197651</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:07:15.855383</Time>
+          <Q1>-0.246025068</Q1>
+          <Q2>0.044720176</Q2>
+          <Q3>0.143419015</Q3>
+          <Q4>0.957550394</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:07:45.855383</Time>
+          <Q1>-0.230685443</Q1>
+          <Q2>0.046542196</Q2>
+          <Q3>0.140837155</Q3>
+          <Q4>0.961656355</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:08:15.855383</Time>
+          <Q1>-0.215288287</Q1>
+          <Q2>0.048345204</Q2>
+          <Q3>0.138189242</Q3>
+          <Q4>0.965514075</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:08:45.855383</Time>
+          <Q1>-0.199837507</Q1>
+          <Q2>0.050129605</Q2>
+          <Q3>0.135477771</Q3>
+          <Q4>0.969122163</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:09:15.855383</Time>
+          <Q1>-0.184337013</Q1>
+          <Q2>0.051895759</Q2>
+          <Q3>0.132705304</Q3>
+          <Q4>0.972479305</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:09:45.855383</Time>
+          <Q1>-0.168790715</Q1>
+          <Q2>0.053643974</Q2>
+          <Q3>0.129874462</Q3>
+          <Q4>0.975584257</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:10:15.855383</Time>
+          <Q1>-0.153202522</Q1>
+          <Q2>0.055374505</Q2>
+          <Q3>0.126987927</Q3>
+          <Q4>0.978435853</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:10:45.855383</Time>
+          <Q1>-0.137576340</Q1>
+          <Q2>0.057087554</Q2>
+          <Q3>0.124048431</Q3>
+          <Q4>0.981033001</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:11:15.855383</Time>
+          <Q1>-0.121916074</Q1>
+          <Q2>0.058783267</Q2>
+          <Q3>0.121058759</Q3>
+          <Q4>0.983374687</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:11:45.855383</Time>
+          <Q1>-0.106225629</Q1>
+          <Q2>0.060461735</Q2>
+          <Q3>0.118021739</Q3>
+          <Q4>0.985459975</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:12:15.855383</Time>
+          <Q1>-0.090508905</Q1>
+          <Q2>0.062122990</Q2>
+          <Q3>0.114940241</Q3>
+          <Q4>0.987288009</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:12:45.855383</Time>
+          <Q1>-0.074769797</Q1>
+          <Q2>0.063767003</Q2>
+          <Q3>0.111817172</Q3>
+          <Q4>0.988858011</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:13:15.855383</Time>
+          <Q1>-0.059012199</Q1>
+          <Q2>0.065393689</Q2>
+          <Q3>0.108655470</Q3>
+          <Q4>0.990169286</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:13:45.855383</Time>
+          <Q1>-0.043240000</Q1>
+          <Q2>0.067002898</Q2>
+          <Q3>0.105458102</Q3>
+          <Q4>0.991221218</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:14:15.855383</Time>
+          <Q1>-0.027457083</Q1>
+          <Q2>0.068594423</Q2>
+          <Q3>0.102228057</Q3>
+          <Q4>0.992013275</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:14:45.855383</Time>
+          <Q1>-0.011667327</Q1>
+          <Q2>0.070167993</Q2>
+          <Q3>0.098968344</Q3>
+          <Q4>0.992545008</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:15:15.855383</Time>
+          <Q1>0.004125396</Q1>
+          <Q2>0.071723275</Q2>
+          <Q3>0.095681986</Q3>
+          <Q4>0.992816051</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:15:45.855383</Time>
+          <Q1>0.019917218</Q1>
+          <Q2>0.073259874</Q2>
+          <Q3>0.092372016</Q3>
+          <Q4>0.992826121</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:16:15.855383</Time>
+          <Q1>0.035704279</Q1>
+          <Q2>0.074777335</Q2>
+          <Q3>0.089041471</Q3>
+          <Q4>0.992575020</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:16:45.855383</Time>
+          <Q1>0.051482725</Q1>
+          <Q2>0.076275140</Q2>
+          <Q3>0.085693389</Q3>
+          <Q4>0.992062637</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:17:15.855383</Time>
+          <Q1>0.067248710</Q1>
+          <Q2>0.077752709</Q2>
+          <Q3>0.082330804</Q3>
+          <Q4>0.991288942</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:17:45.855383</Time>
+          <Q1>0.082998395</Q1>
+          <Q2>0.079209402</Q2>
+          <Q3>0.078956742</Q3>
+          <Q4>0.990253993</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:18:15.855383</Time>
+          <Q1>0.098727946</Q1>
+          <Q2>0.080644519</Q2>
+          <Q3>0.075574215</Q3>
+          <Q4>0.988957933</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:18:45.855384</Time>
+          <Q1>0.114433543</Q1>
+          <Q2>0.082057301</Q2>
+          <Q3>0.072186217</Q3>
+          <Q4>0.987400989</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:19:15.855384</Time>
+          <Q1>0.130111367</Q1>
+          <Q2>0.083446931</Q2>
+          <Q3>0.068795721</Q3>
+          <Q4>0.985583477</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:19:45.855384</Time>
+          <Q1>0.145757614</Q1>
+          <Q2>0.084812536</Q2>
+          <Q3>0.065405672</Q3>
+          <Q4>0.983505796</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:20:15.855384</Time>
+          <Q1>0.161368484</Q1>
+          <Q2>0.086153184</Q2>
+          <Q3>0.062018987</Q3>
+          <Q4>0.981168429</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:20:45.855384</Time>
+          <Q1>0.176940191</Q1>
+          <Q2>0.087467892</Q2>
+          <Q3>0.058638543</Q3>
+          <Q4>0.978571948</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:21:15.855384</Time>
+          <Q1>0.192468953</Q1>
+          <Q2>0.088755625</Q2>
+          <Q3>0.055267183</Q3>
+          <Q4>0.975717008</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:21:45.855384</Time>
+          <Q1>0.207951003</Q1>
+          <Q2>0.090015294</Q2>
+          <Q3>0.051907701</Q3>
+          <Q4>0.972604348</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:22:15.855384</Time>
+          <Q1>0.223382579</Q1>
+          <Q2>0.091245766</Q2>
+          <Q3>0.048562848</Q3>
+          <Q4>0.969234793</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:22:45.855384</Time>
+          <Q1>0.238759932</Q1>
+          <Q2>0.092445859</Q2>
+          <Q3>0.045235320</Q3>
+          <Q4>0.965609250</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:23:15.855384</Time>
+          <Q1>0.254079324</Q1>
+          <Q2>0.093614345</Q2>
+          <Q3>0.041927759</Q3>
+          <Q4>0.961728711</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:23:45.855384</Time>
+          <Q1>0.269337026</Q1>
+          <Q2>0.094749958</Q2>
+          <Q3>0.038642748</Q3>
+          <Q4>0.957594251</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:24:15.855384</Time>
+          <Q1>0.284529320</Q1>
+          <Q2>0.095851390</Q2>
+          <Q3>0.035382806</Q3>
+          <Q4>0.953207026</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:24:45.855384</Time>
+          <Q1>0.299652500</Q1>
+          <Q2>0.096917298</Q2>
+          <Q3>0.032150386</Q3>
+          <Q4>0.948568273</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:25:15.855384</Time>
+          <Q1>0.314702873</Q1>
+          <Q2>0.097946305</Q2>
+          <Q3>0.028947871</Q3>
+          <Q4>0.943679312</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:25:45.855384</Time>
+          <Q1>0.329676753</Q1>
+          <Q2>0.098937003</Q2>
+          <Q3>0.025777570</Q3>
+          <Q4>0.938541541</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:26:15.855384</Time>
+          <Q1>0.344570473</Q1>
+          <Q2>0.099887957</Q2>
+          <Q3>0.022641718</Q3>
+          <Q4>0.933156438</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:26:45.855384</Time>
+          <Q1>0.359380372</Q1>
+          <Q2>0.100797707</Q2>
+          <Q3>0.019542470</Q3>
+          <Q4>0.927525559</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:27:15.855384</Time>
+          <Q1>0.374102805</Q1>
+          <Q2>0.101664772</Q2>
+          <Q3>0.016481897</Q3>
+          <Q4>0.921650537</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:27:45.855384</Time>
+          <Q1>0.388734141</Q1>
+          <Q2>0.102487654</Q2>
+          <Q3>0.013461989</Q3>
+          <Q4>0.915533081</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:28:15.855384</Time>
+          <Q1>0.403270761</Q1>
+          <Q2>0.103264841</Q2>
+          <Q3>0.010484646</Q3>
+          <Q4>0.909174977</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:28:45.855384</Time>
+          <Q1>0.417709059</Q1>
+          <Q2>0.103994812</Q2>
+          <Q3>0.007551681</Q3>
+          <Q4>0.902578081</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:29:15.855384</Time>
+          <Q1>0.432045446</Q1>
+          <Q2>0.104676037</Q2>
+          <Q3>0.004664815</Q3>
+          <Q4>0.895744327</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:29:45.855384</Time>
+          <Q1>0.446276347</Q1>
+          <Q2>0.105306986</Q2>
+          <Q3>0.001825675</Q3>
+          <Q4>0.888675716</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:30:15.855384</Time>
+          <Q1>0.460398201</Q1>
+          <Q2>0.105886129</Q2>
+          <Q3>-0.000964204</Q3>
+          <Q4>0.881374321</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:30:45.855384</Time>
+          <Q1>0.474407465</Q1>
+          <Q2>0.106411941</Q2>
+          <Q3>-0.003703386</Q3>
+          <Q4>0.873842286</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:31:15.855384</Time>
+          <Q1>0.488300611</Q1>
+          <Q2>0.106882908</Q2>
+          <Q3>-0.006390529</Q3>
+          <Q4>0.866081820</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:31:45.855384</Time>
+          <Q1>0.502074128</Q1>
+          <Q2>0.107297529</Q2>
+          <Q3>-0.009024393</Q3>
+          <Q4>0.858095199</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:32:15.855384</Time>
+          <Q1>0.515724524</Q1>
+          <Q2>0.107654320</Q2>
+          <Q3>-0.011603833</Q3>
+          <Q4>0.849884765</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:32:45.855384</Time>
+          <Q1>0.529248324</Q1>
+          <Q2>0.107951819</Q2>
+          <Q3>-0.014127807</Q3>
+          <Q4>0.841452923</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:33:15.855384</Time>
+          <Q1>0.542642074</Q1>
+          <Q2>0.108188592</Q2>
+          <Q3>-0.016595370</Q3>
+          <Q4>0.832802138</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:33:45.855384</Time>
+          <Q1>0.555902338</Q1>
+          <Q2>0.108363234</Q2>
+          <Q3>-0.019005678</Q3>
+          <Q4>0.823934940</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:34:15.855384</Time>
+          <Q1>0.569025701</Q1>
+          <Q2>0.108474375</Q2>
+          <Q3>-0.021357987</Q3>
+          <Q4>0.814853912</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:34:45.855384</Time>
+          <Q1>0.582008770</Q1>
+          <Q2>0.108520683</Q2>
+          <Q3>-0.023651651</Q3>
+          <Q4>0.805561700</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:35:15.855384</Time>
+          <Q1>0.594848174</Q1>
+          <Q2>0.108500870</Q2>
+          <Q3>-0.025886125</Q3>
+          <Q4>0.796061003</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:35:45.855384</Time>
+          <Q1>0.607540566</Q1>
+          <Q2>0.108413694</Q2>
+          <Q3>-0.028060958</Q3>
+          <Q4>0.786354573</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:36:15.855384</Time>
+          <Q1>0.620082622</Q1>
+          <Q2>0.108257966</Q2>
+          <Q3>-0.030175798</Q3>
+          <Q4>0.776445218</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:36:45.855384</Time>
+          <Q1>0.632471044</Q1>
+          <Q2>0.108032550</Q2>
+          <Q3>-0.032230389</Q3>
+          <Q4>0.766335794</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:37:15.855384</Time>
+          <Q1>0.644702560</Q1>
+          <Q2>0.107736370</Q2>
+          <Q3>-0.034224568</Q3>
+          <Q4>0.756029207</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:37:45.855384</Time>
+          <Q1>0.656773926</Q1>
+          <Q2>0.107368414</Q2>
+          <Q3>-0.036158262</Q3>
+          <Q4>0.745528413</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:38:15.855384</Time>
+          <Q1>0.668681924</Q1>
+          <Q2>0.106927735</Q2>
+          <Q3>-0.038031492</Q3>
+          <Q4>0.734836410</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:38:45.855384</Time>
+          <Q1>0.680423367</Q1>
+          <Q2>0.106413456</Q2>
+          <Q3>-0.039844363</Q3>
+          <Q4>0.723956245</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:39:15.855384</Time>
+          <Q1>0.691995100</Q1>
+          <Q2>0.105824775</Q2>
+          <Q3>-0.041597067</Q3>
+          <Q4>0.712891003</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:39:45.855384</Time>
+          <Q1>0.703393998</Q1>
+          <Q2>0.105160966</Q2>
+          <Q3>-0.043289881</Q3>
+          <Q4>0.701643814</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:40:15.855384</Time>
+          <Q1>0.714616968</Q1>
+          <Q2>0.104421383</Q2>
+          <Q3>-0.044923158</Q3>
+          <Q4>0.690217845</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:40:45.855384</Time>
+          <Q1>0.725660954</Q1>
+          <Q2>0.103605465</Q2>
+          <Q3>-0.046497333</Q3>
+          <Q4>0.678616302</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:41:15.855384</Time>
+          <Q1>0.736522933</Q1>
+          <Q2>0.102712733</Q2>
+          <Q3>-0.048012910</Q3>
+          <Q4>0.666842428</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:41:45.855384</Time>
+          <Q1>0.747199921</Q1>
+          <Q2>0.101742801</Q2>
+          <Q3>-0.049470469</Q3>
+          <Q4>0.654899499</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:42:15.855384</Time>
+          <Q1>0.757688969</Q1>
+          <Q2>0.100695372</Q2>
+          <Q3>-0.050870654</Q3>
+          <Q4>0.642790825</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:42:45.855384</Time>
+          <Q1>0.767987170</Q1>
+          <Q2>0.099570241</Q2>
+          <Q3>-0.052214175</Q3>
+          <Q4>0.630519749</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:43:15.855384</Time>
+          <Q1>0.778091656</Q1>
+          <Q2>0.098367302</Q2>
+          <Q3>-0.053501802</Q3>
+          <Q4>0.618089642</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:43:45.855384</Time>
+          <Q1>0.787999602</Q1>
+          <Q2>0.097086543</Q2>
+          <Q3>-0.054734362</Q3>
+          <Q4>0.605503906</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:44:15.855384</Time>
+          <Q1>0.797708227</Q1>
+          <Q2>0.095728052</Q2>
+          <Q3>-0.055912733</Q3>
+          <Q4>0.592765967</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:44:45.855385</Time>
+          <Q1>0.807214792</Q1>
+          <Q2>0.094292018</Q2>
+          <Q3>-0.057037846</Q3>
+          <Q4>0.579879280</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:45:15.855385</Time>
+          <Q1>0.816516606</Q1>
+          <Q2>0.092778731</Q2>
+          <Q3>-0.058110673</Q3>
+          <Q4>0.566847324</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:45:45.855385</Time>
+          <Q1>0.825611026</Q1>
+          <Q2>0.091188583</Q2>
+          <Q3>-0.059132229</Q3>
+          <Q4>0.553673600</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:46:15.855385</Time>
+          <Q1>0.834495456</Q1>
+          <Q2>0.089522069</Q2>
+          <Q3>-0.060103568</Q3>
+          <Q4>0.540361634</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:46:45.855385</Time>
+          <Q1>0.843167350</Q1>
+          <Q2>0.087779789</Q2>
+          <Q3>-0.061025772</Q3>
+          <Q4>0.526914968</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:47:15.855385</Time>
+          <Q1>0.851624216</Q1>
+          <Q2>0.085962447</Q2>
+          <Q3>-0.061899958</Q3>
+          <Q4>0.513337168</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:47:45.855385</Time>
+          <Q1>0.859863611</Q1>
+          <Q2>0.084070849</Q2>
+          <Q3>-0.062727261</Q3>
+          <Q4>0.499631817</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:48:15.855385</Time>
+          <Q1>0.867883150</Q1>
+          <Q2>0.082105907</Q2>
+          <Q3>-0.063508843</Q3>
+          <Q4>0.485802516</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:48:45.855385</Time>
+          <Q1>0.875680501</Q1>
+          <Q2>0.080068636</Q2>
+          <Q3>-0.064245878</Q3>
+          <Q4>0.471852880</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:49:15.855385</Time>
+          <Q1>0.883253390</Q1>
+          <Q2>0.077960154</Q2>
+          <Q3>-0.064939554</Q3>
+          <Q4>0.457786543</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:49:45.855385</Time>
+          <Q1>0.890599599</Q1>
+          <Q2>0.075781679</Q2>
+          <Q3>-0.065591068</Q3>
+          <Q4>0.443607151</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:50:15.855385</Time>
+          <Q1>0.897716971</Q1>
+          <Q2>0.073534532</Q2>
+          <Q3>-0.066201621</Q3>
+          <Q4>0.429318364</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:50:45.855385</Time>
+          <Q1>0.904603410</Q1>
+          <Q2>0.071220135</Q2>
+          <Q3>-0.066772414</Q3>
+          <Q4>0.414923857</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:51:15.855385</Time>
+          <Q1>0.911256882</Q1>
+          <Q2>0.068840004</Q2>
+          <Q3>-0.067304645</Q3>
+          <Q4>0.400427314</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:51:45.855385</Time>
+          <Q1>0.917675414</Q1>
+          <Q2>0.066395754</Q2>
+          <Q3>-0.067799506</Q3>
+          <Q4>0.385832433</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:52:15.855385</Time>
+          <Q1>0.923857099</Q1>
+          <Q2>0.063889095</Q2>
+          <Q3>-0.068258177</Q3>
+          <Q4>0.371142919</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:52:45.855385</Time>
+          <Q1>0.929800095</Q1>
+          <Q2>0.061321829</Q2>
+          <Q3>-0.068681823</Q3>
+          <Q4>0.356362490</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:53:15.855385</Time>
+          <Q1>0.935502627</Q1>
+          <Q2>0.058695848</Q2>
+          <Q3>-0.069071594</Q3>
+          <Q4>0.341494872</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:53:45.855385</Time>
+          <Q1>0.940962987</Q1>
+          <Q2>0.056013131</Q2>
+          <Q3>-0.069428615</Q3>
+          <Q4>0.326543800</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:54:15.855385</Time>
+          <Q1>0.946179537</Q1>
+          <Q2>0.053275743</Q2>
+          <Q3>-0.069753989</Q3>
+          <Q4>0.311513017</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:54:45.855385</Time>
+          <Q1>0.951150708</Q1>
+          <Q2>0.050485832</Q2>
+          <Q3>-0.070048790</Q3>
+          <Q4>0.296406273</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:55:15.855385</Time>
+          <Q1>0.955875001</Q1>
+          <Q2>0.047645625</Q2>
+          <Q3>-0.070314063</Q3>
+          <Q4>0.281227326</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:55:45.855385</Time>
+          <Q1>0.960350992</Q1>
+          <Q2>0.044757424</Q2>
+          <Q3>-0.070550817</Q3>
+          <Q4>0.265979939</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:56:15.855385</Time>
+          <Q1>0.964577326</Q1>
+          <Q2>0.041823606</Q2>
+          <Q3>-0.070760027</Q3>
+          <Q4>0.250667883</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:56:45.855385</Time>
+          <Q1>0.968552723</Q1>
+          <Q2>0.038846616</Q2>
+          <Q3>-0.070942627</Q3>
+          <Q4>0.235294934</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:57:15.855385</Time>
+          <Q1>0.972275981</Q1>
+          <Q2>0.035828968</Q2>
+          <Q3>-0.071099510</Q3>
+          <Q4>0.219864872</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:57:45.855385</Time>
+          <Q1>0.975745968</Q1>
+          <Q2>0.032773236</Q2>
+          <Q3>-0.071231526</Q3>
+          <Q4>0.204381485</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:58:15.855385</Time>
+          <Q1>0.978961631</Q1>
+          <Q2>0.029682055</Q2>
+          <Q3>-0.071339477</Q3>
+          <Q4>0.188848561</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:58:45.855385</Time>
+          <Q1>0.981921995</Q1>
+          <Q2>0.026558112</Q2>
+          <Q3>-0.071424118</Q3>
+          <Q4>0.173269898</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:59:15.855385</Time>
+          <Q1>0.984626161</Q1>
+          <Q2>0.023404148</Q2>
+          <Q3>-0.071486154</Q3>
+          <Q4>0.157649292</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T11:59:45.855385</Time>
+          <Q1>0.987073307</Q1>
+          <Q2>0.020222952</Q2>
+          <Q3>-0.071526238</Q3>
+          <Q4>0.141990547</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:00:15.855385</Time>
+          <Q1>0.989262693</Q1>
+          <Q2>0.017017352</Q2>
+          <Q3>-0.071544968</Q3>
+          <Q4>0.126297469</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:00:45.855385</Time>
+          <Q1>0.991193657</Q1>
+          <Q2>0.013790220</Q2>
+          <Q3>-0.071542889</Q3>
+          <Q4>0.110573865</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:01:15.855385</Time>
+          <Q1>0.992865615</Q1>
+          <Q2>0.010544458</Q2>
+          <Q3>-0.071520488</Q3>
+          <Q4>0.094823549</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:01:45.855385</Time>
+          <Q1>0.994278065</Q1>
+          <Q2>0.007283002</Q2>
+          <Q3>-0.071478196</Q3>
+          <Q4>0.079050332</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:02:15.855385</Time>
+          <Q1>0.995430586</Q1>
+          <Q2>0.004008813</Q2>
+          <Q3>-0.071416384</Q3>
+          <Q4>0.063258032</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:02:45.855385</Time>
+          <Q1>0.996322836</Q1>
+          <Q2>0.000724873</Q2>
+          <Q3>-0.071335363</Q3>
+          <Q4>0.047450466</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:03:15.855385</Time>
+          <Q1>0.996954556</Q1>
+          <Q2>-0.002565819</Q2>
+          <Q3>-0.071235386</Q3>
+          <Q4>0.031631453</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:03:45.855385</Time>
+          <Q1>0.997325568</Q1>
+          <Q2>-0.005860249</Q2>
+          <Q3>-0.071116645</Q3>
+          <Q4>0.015804816</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:04:15.855385</Time>
+          <Q1>0.997435773</Q1>
+          <Q2>-0.009155398</Q2>
+          <Q3>-0.070979269</Q3>
+          <Q4>-0.000025625</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:04:45.855385</Time>
+          <Q1>0.997285157</Q1>
+          <Q2>-0.012448238</Q2>
+          <Q3>-0.070823326</Q3>
+          <Q4>-0.015856047</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:05:15.855385</Time>
+          <Q1>0.996873784</Q1>
+          <Q2>-0.015735748</Q2>
+          <Q3>-0.070648825</Q3>
+          <Q4>-0.031682625</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:05:45.855385</Time>
+          <Q1>0.996201802</Q1>
+          <Q2>-0.019014906</Q2>
+          <Q3>-0.070455711</Q3>
+          <Q4>-0.047501537</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:06:15.855385</Time>
+          <Q1>0.995269439</Q1>
+          <Q2>-0.022282704</Q2>
+          <Q3>-0.070243870</Q3>
+          <Q4>-0.063308958</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:06:45.855385</Time>
+          <Q1>0.994077004</Q1>
+          <Q2>-0.025536146</Q2>
+          <Q3>-0.070013125</Q3>
+          <Q4>-0.079101066</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:07:15.855385</Time>
+          <Q1>0.992624886</Q1>
+          <Q2>-0.028772254</Q2>
+          <Q3>-0.069763239</Q3>
+          <Q4>-0.094874036</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:07:45.855385</Time>
+          <Q1>0.990913558</Q1>
+          <Q2>-0.031988074</Q2>
+          <Q3>-0.069493919</Q3>
+          <Q4>-0.110624046</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:08:15.855385</Time>
+          <Q1>0.988943568</Q1>
+          <Q2>-0.035180678</Q2>
+          <Q3>-0.069204808</Q3>
+          <Q4>-0.126347276</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:08:45.855385</Time>
+          <Q1>0.986715547</Q1>
+          <Q2>-0.038347172</Q2>
+          <Q3>-0.068895496</Q3>
+          <Q4>-0.142039905</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:09:15.855385</Time>
+          <Q1>0.984230204</Q1>
+          <Q2>-0.041484696</Q2>
+          <Q3>-0.068565514</Q3>
+          <Q4>-0.157698116</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:09:45.855385</Time>
+          <Q1>0.981488328</Q1>
+          <Q2>-0.044590430</Q2>
+          <Q3>-0.068214337</Q3>
+          <Q4>-0.173318090</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:10:15.855385</Time>
+          <Q1>0.978490783</Q1>
+          <Q2>-0.047661598</Q2>
+          <Q3>-0.067841389</Q3>
+          <Q4>-0.188896016</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:10:45.855386</Time>
+          <Q1>0.975238515</Q1>
+          <Q2>-0.050695473</Q2>
+          <Q3>-0.067446040</Q3>
+          <Q4>-0.204428080</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:11:15.855386</Time>
+          <Q1>0.971732542</Q1>
+          <Q2>-0.053689381</Q2>
+          <Q3>-0.067027609</Q3>
+          <Q4>-0.219910475</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:11:45.855386</Time>
+          <Q1>0.967973961</Q1>
+          <Q2>-0.056640703</Q2>
+          <Q3>-0.066585369</Q3>
+          <Q4>-0.235339395</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:12:15.855386</Time>
+          <Q1>0.963963942</Q1>
+          <Q2>-0.059546881</Q2>
+          <Q3>-0.066118544</Q3>
+          <Q4>-0.250711038</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:12:45.855386</Time>
+          <Q1>0.959703733</Q1>
+          <Q2>-0.062405419</Q2>
+          <Q3>-0.065626315</Q3>
+          <Q4>-0.266021608</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:13:15.855386</Time>
+          <Q1>0.955194650</Q1>
+          <Q2>-0.065213891</Q2>
+          <Q3>-0.065107821</Q3>
+          <Q4>-0.281267311</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:13:45.855386</Time>
+          <Q1>0.950438086</Q1>
+          <Q2>-0.067969941</Q2>
+          <Q3>-0.064562163</Q3>
+          <Q4>-0.296444359</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:14:15.855386</Time>
+          <Q1>0.945435505</Q1>
+          <Q2>-0.070671285</Q2>
+          <Q3>-0.063988402</Q3>
+          <Q4>-0.311548970</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:14:45.855386</Time>
+          <Q1>0.940188438</Q1>
+          <Q2>-0.073315719</Q2>
+          <Q3>-0.063385567</Q3>
+          <Q4>-0.326577366</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:15:15.855386</Time>
+          <Q1>0.934698490</Q1>
+          <Q2>-0.075901119</Q2>
+          <Q3>-0.062752657</Q3>
+          <Q4>-0.341525778</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:15:45.855386</Time>
+          <Q1>0.928967331</Q1>
+          <Q2>-0.078425443</Q2>
+          <Q3>-0.062088641</Q3>
+          <Q4>-0.356390443</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:16:15.855386</Time>
+          <Q1>0.922996702</Q1>
+          <Q2>-0.080886738</Q2>
+          <Q3>-0.061392464</Q3>
+          <Q4>-0.371167604</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:16:45.855386</Time>
+          <Q1>0.916788405</Q1>
+          <Q2>-0.083283137</Q2>
+          <Q3>-0.060663049</Q3>
+          <Q4>-0.385853513</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:17:15.855386</Time>
+          <Q1>0.910344312</Q1>
+          <Q2>-0.085612866</Q2>
+          <Q3>-0.059899301</Q3>
+          <Q4>-0.400444433</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:17:45.855386</Time>
+          <Q1>0.903666357</Q1>
+          <Q2>-0.087874243</Q2>
+          <Q3>-0.059100110</Q3>
+          <Q4>-0.414936634</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:18:15.855386</Time>
+          <Q1>0.896756535</Q1>
+          <Q2>-0.090065683</Q2>
+          <Q3>-0.058264354</Q3>
+          <Q4>-0.429326397</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:18:45.855386</Time>
+          <Q1>0.889616905</Q1>
+          <Q2>-0.092185698</Q2>
+          <Q3>-0.057390905</Q3>
+          <Q4>-0.443610014</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:19:15.855386</Time>
+          <Q1>0.882249584</Q1>
+          <Q2>-0.094232900</Q2>
+          <Q3>-0.056478630</Q3>
+          <Q4>-0.457783789</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:19:45.855386</Time>
+          <Q1>0.874656749</Q1>
+          <Q2>-0.096205999</Q2>
+          <Q3>-0.055526396</Q3>
+          <Q4>-0.471844039</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:20:15.855386</Time>
+          <Q1>0.866840635</Q1>
+          <Q2>-0.098103810</Q2>
+          <Q3>-0.054533074</Q3>
+          <Q4>-0.485787094</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:20:45.855386</Time>
+          <Q1>0.858803531</Q1>
+          <Q2>-0.099925250</Q2>
+          <Q3>-0.053497544</Q3>
+          <Q4>-0.499609299</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:21:15.855386</Time>
+          <Q1>0.850547785</Q1>
+          <Q2>-0.101669338</Q2>
+          <Q3>-0.052418695</Q3>
+          <Q4>-0.513307015</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:21:45.855386</Time>
+          <Q1>0.842075794</Q1>
+          <Q2>-0.103335200</Q2>
+          <Q3>-0.051295436</Q3>
+          <Q4>-0.526876619</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:22:15.855386</Time>
+          <Q1>0.833390011</Q1>
+          <Q2>-0.104922065</Q2>
+          <Q3>-0.050126692</Q3>
+          <Q4>-0.540314506</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:22:45.855386</Time>
+          <Q1>0.824492937</Q1>
+          <Q2>-0.106429269</Q2>
+          <Q3>-0.048911415</Q3>
+          <Q4>-0.553617089</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:23:15.855386</Time>
+          <Q1>0.815387124</Q1>
+          <Q2>-0.107856251</Q2>
+          <Q3>-0.047648583</Q3>
+          <Q4>-0.566780804</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:23:45.855386</Time>
+          <Q1>0.806075174</Q1>
+          <Q2>-0.109202555</Q2>
+          <Q3>-0.046337207</Q3>
+          <Q4>-0.579802104</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:24:15.855386</Time>
+          <Q1>0.796559732</Q1>
+          <Q2>-0.110467830</Q2>
+          <Q3>-0.044976334</Q3>
+          <Q4>-0.592677469</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:24:45.855386</Time>
+          <Q1>0.786843492</Q1>
+          <Q2>-0.111651828</Q2>
+          <Q3>-0.043565053</Q3>
+          <Q4>-0.605403399</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:25:15.855386</Time>
+          <Q1>0.776929190</Q1>
+          <Q2>-0.112754403</Q2>
+          <Q3>-0.042102496</Q3>
+          <Q4>-0.617976422</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:25:45.855386</Time>
+          <Q1>-0.766819606</Q1>
+          <Q2>0.113775512</Q2>
+          <Q3>0.040587842</Q3>
+          <Q4>0.630393093</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:26:15.855386</Time>
+          <Q1>-0.756517563</Q1>
+          <Q2>0.114715209</Q2>
+          <Q3>0.039020324</Q3>
+          <Q4>0.642649992</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:26:45.855386</Time>
+          <Q1>-0.746025920</Q1>
+          <Q2>0.115573648</Q2>
+          <Q3>0.037399230</Q3>
+          <Q4>0.654743733</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:27:15.855386</Time>
+          <Q1>-0.735347580</Q1>
+          <Q2>0.116351080</Q2>
+          <Q3>0.035723909</Q3>
+          <Q4>0.666670957</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:27:45.855386</Time>
+          <Q1>-0.724485480</Q1>
+          <Q2>0.117047848</Q2>
+          <Q3>0.033993771</Q3>
+          <Q4>0.678428341</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:28:15.855386</Time>
+          <Q1>-0.713442594</Q1>
+          <Q2>0.117664388</Q2>
+          <Q3>0.032208295</Q3>
+          <Q4>0.690012595</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:28:45.855386</Time>
+          <Q1>-0.702221934</Q1>
+          <Q2>0.118201227</Q2>
+          <Q3>0.030367029</Q3>
+          <Q4>0.701420465</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:29:15.855386</Time>
+          <Q1>-0.690826542</Q1>
+          <Q2>0.118658976</Q2>
+          <Q3>0.028469593</Q3>
+          <Q4>0.712648734</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:29:45.855386</Time>
+          <Q1>-0.679259495</Q1>
+          <Q2>0.119038333</Q2>
+          <Q3>0.026515685</Q3>
+          <Q4>0.723694225</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:30:15.855386</Time>
+          <Q1>-0.667523902</Q1>
+          <Q2>0.119340074</Q2>
+          <Q3>0.024505082</Q3>
+          <Q4>0.734553802</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:30:45.855386</Time>
+          <Q1>-0.655622900</Q1>
+          <Q2>0.119565055</Q2>
+          <Q3>0.022437643</Q3>
+          <Q4>0.745224370</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:31:15.855386</Time>
+          <Q1>-0.643559658</Q1>
+          <Q2>0.119714205</Q2>
+          <Q3>0.020313310</Q3>
+          <Q4>0.755702881</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:31:45.855386</Time>
+          <Q1>-0.631337372</Q1>
+          <Q2>0.119788526</Q2>
+          <Q3>0.018132114</Q3>
+          <Q4>0.765986330</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:32:15.855386</Time>
+          <Q1>-0.618959265</Q1>
+          <Q2>0.119789085</Q2>
+          <Q3>0.015894174</Q3>
+          <Q4>0.776071761</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:32:45.855386</Time>
+          <Q1>-0.606428586</Q1>
+          <Q2>0.119717014</Q2>
+          <Q3>0.013599700</Q3>
+          <Q4>0.785956267</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:33:15.855386</Time>
+          <Q1>-0.593748610</Q1>
+          <Q2>0.119573505</Q2>
+          <Q3>0.011248994</Q3>
+          <Q4>0.795636993</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:33:45.855386</Time>
+          <Q1>-0.580922636</Q1>
+          <Q2>0.119359806</Q2>
+          <Q3>0.008842453</Q3>
+          <Q4>0.805111134</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:34:15.855386</Time>
+          <Q1>-0.567953985</Q1>
+          <Q2>0.119077215</Q2>
+          <Q3>0.006380570</Q3>
+          <Q4>0.814375942</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:34:45.855386</Time>
+          <Q1>-0.554846003</Q1>
+          <Q2>0.118727079</Q2>
+          <Q3>0.003863934</Q3>
+          <Q4>0.823428724</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:35:15.855386</Time>
+          <Q1>-0.541602055</Q1>
+          <Q2>0.118310791</Q2>
+          <Q3>0.001293230</Q3>
+          <Q4>0.832266843</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:35:45.855386</Time>
+          <Q1>-0.528225529</Q1>
+          <Q2>0.117829781</Q2>
+          <Q3>-0.001330755</Q3>
+          <Q4>0.840887723</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:36:15.855386</Time>
+          <Q1>-0.514719830</Q1>
+          <Q2>0.117285513</Q2>
+          <Q3>-0.004007140</Q3>
+          <Q4>0.849288848</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:36:45.855387</Time>
+          <Q1>-0.501088386</Q1>
+          <Q2>0.116679486</Q2>
+          <Q3>-0.006734942</Q3>
+          <Q4>0.857467765</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:37:15.855387</Time>
+          <Q1>-0.487334642</Q1>
+          <Q2>0.116013223</Q2>
+          <Q3>-0.009513081</Q3>
+          <Q4>0.865422082</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:37:45.855387</Time>
+          <Q1>-0.473462061</Q1>
+          <Q2>0.115288271</Q2>
+          <Q3>-0.012340378</Q3>
+          <Q4>0.873149476</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:38:15.855387</Time>
+          <Q1>-0.459474123</Q1>
+          <Q2>0.114506195</Q2>
+          <Q3>-0.015215557</Q3>
+          <Q4>0.880647687</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="UTC">UTC=2014-06-11T12:38:45.855387</Time>
+          <Q1>-0.445374325</Q1>
+          <Q2>0.113668574</Q2>
+          <Q3>-0.018137244</Q3>
+          <Q4>0.887914526</Q4>
+        </Quaternions>
+      </List_of_Quaternions>
+    </Quaternion_Data>
+  </Data_Block>
+</Earth_Explorer_File>

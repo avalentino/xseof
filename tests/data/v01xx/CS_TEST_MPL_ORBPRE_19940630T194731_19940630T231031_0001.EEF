@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<Earth_Explorer_File xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://eop-cfi.esa.int/CFI http://eop-cfi.esa.int/CFI/EE_CFI_SCHEMAS/EO_OPER_MPL_ORBPRE_0100.XSD"
+  xmlns="http://eop-cfi.esa.int/CFI" schemaVersion="1.0">
+  <Earth_Explorer_Header>
+    <Fixed_Header>
+      <File_Name>CS_TEST_MPL_ORBPRE_19940630T194731_19940630T231031_0001</File_Name>
+      <File_Description>FOS Predicted Orbit File</File_Description>
+      <Notes>
+                 WARNING: this is an example of file compliant with formats defined and supported
+                          within the Earth Observation Mission CFI Software.
+                          This file does not reflect the actual satellite orbit
+                          attitude or instrument configuration.
+                          This file shall not be used in production environments.
+      </Notes>
+      <Mission>CryoSat</Mission>
+      <File_Class>TEST</File_Class>
+      <File_Type>MPL_ORBPRE</File_Type>
+      <Validity_Period>
+        <Validity_Start>UTC=1994-06-30T19:47:31</Validity_Start>
+        <Validity_Stop>UTC=1994-06-30T23:10:31</Validity_Stop>
+      </Validity_Period>
+      <File_Version>0001</File_Version>
+      <Source>
+        <System>System Identification as per Ground Segment File Format Standard (PE-TN-ESA-GS-0001)</System>
+        <Creator>Creator Identification as per Ground Segment File Format Standard (PE-TN-ESA-GS-0001)</Creator>
+        <Creator_Version>Creator Version Identification as per Ground Segment File Format Standard (PE-TN-ESA-GS-0001)</Creator_Version>
+        <Creation_Date>UTC=2006-06-30T08:34:08</Creation_Date>
+      </Source>
+    </Fixed_Header>
+    <Variable_Header></Variable_Header>
+  </Earth_Explorer_Header>
+  <Data_Block type="xml">
+    <List_of_OSVs count="3">
+      <OSV>
+        <TAI>TAI=1994-06-30T19:46:55.900000</TAI>
+        <UTC>UTC=1994-06-30T19:47:30.900000</UTC>
+        <UT1>UT1=1994-06-30T19:47:31.200000</UT1>
+        <Absolute_Orbit>+1000</Absolute_Orbit>
+        <X unit="m">+5418770.850</X>
+        <Y unit="m">+4220913.177</Y>
+        <Z unit="m">+2170696.436</Z>
+        <VX unit="m/s">-0720.221930</VX>
+        <VY unit="m/s">-2693.573043</VY>
+        <VZ unit="m/s">+7001.954226</VZ>
+        <Quality>000000.000000</Quality>
+      </OSV>
+      <OSV>
+        <TAI>TAI=1994-06-30T21:27:55.746245</TAI>
+        <UTC>UTC=1994-06-30T21:28:30.746245</UTC>
+        <UT1>UT1=1994-06-30T21:28:31.046245</UT1>
+        <Absolute_Orbit>+1001</Absolute_Orbit>
+        <X unit="m">+6704556.847</X>
+        <Y unit="m">+1492571.235</Y>
+        <Z unit="m">+2170695.152</Z>
+        <VX unit="m/s">-1804.745318</VX>
+        <VY unit="m/s">-2125.553045</VY>
+        <VZ unit="m/s">+7001.929197</VZ>
+        <Quality>000000.000000</Quality>
+      </OSV>
+      <OSV>
+        <TAI>TAI=1994-06-30T23:09:55.900000</TAI>
+        <UTC>UTC=1994-06-30T23:10:30.900000</UTC>
+        <UT1>UT1=1994-06-30T23:10:31.200000</UT1>
+        <Absolute_Orbit>+1002</Absolute_Orbit>
+        <X unit="m">+6697635.779</X>
+        <Y unit="m">-1523450.127</Y>
+        <Z unit="m">+2170679.055</Z>
+        <VX unit="m/s">-2541.344929</VX>
+        <VY unit="m/s">-1147.580350</VY>
+        <VZ unit="m/s">+7001.891277</VZ>
+        <Quality>000000.000000</Quality>
+      </OSV>
+    </List_of_OSVs>
+  </Data_Block>
+</Earth_Explorer_File>
