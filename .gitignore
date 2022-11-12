@@ -76,6 +76,9 @@ _venv
 # mypy
 .mypy_cache/
 
+# vscode
+/.vscode
+
 # misc
 *~
 /EE_CFI_SCHEMAS
