@@ -1,14 +1,13 @@
-"""I/O library for the ESA EOF files based on xsData.
+"""I/O library for the ESA EOF files.
 
-This package provides a set of "dataclasses", comapible with the xsData [1]
+This package provides a set of "dataclasses", comapible with the xsdata_
 Python library, to access and make I/O operation on the XML files in the
-ESA Earth Observation Ground Segment File Format (EOF) [2].
+ESA Earth Observation Ground Segment File Format (EOF).
 
 In particular, this package support all the XML based orbit and attitude
-products described in [2].
+products.
 
-[1] https://github.com/tefra/xsdata
-[2] https://eop-cfi.esa.int/Repo/PUBLIC/DOCUMENTATION/SYSTEM_SUPPORT_DOCS/PE-TN-ESA-GS-0001%20EO%20GS%20File%20Format%20Standard%203.0%20signed.pdf
+.. _xsdata: https://github.com/tefra/xsdata
 """
 
 
