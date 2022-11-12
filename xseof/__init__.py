@@ -11,56 +11,43 @@ products.
 """
 
 
-from typing import Union 
-from xsdata.formats.dataclass.parsers import XmlParser
+from typing import Union
+from xsdata.exceptions import ParserError
+
+import xseof.aux_orbdop
+import xseof.aux_orbdor
+import xseof.aux_orbres
+import xseof.int_attref
+import xseof.mpl_orbpre
+import xseof.mpl_orbref
 
 
 __version__ = "1.0.0.dev0"
 
 
-def _import_all():
-    """Lazy import modules for all the products types and all versions."""
-    import xseof.aux_orbdop.v01xx
-    import xseof.aux_orbdop.v02xx
-    import xseof.aux_orbdop.v03xx
+def load(source):
+    """Load an EOF object from the source stream.
 
-    import xseof.aux_orbdor.v01xx
-    import xseof.aux_orbdor.v02xx
-    import xseof.aux_orbdor.v03xx
-
-    import xseof.aux_orbres.v01xx
-    import xseof.aux_orbres.v02xx
-    import xseof.aux_orbres.v03xx
-
-    import xseof.int_attref.v01xx
-    import xseof.int_attref.v02xx
-    import xseof.int_attref.v03xx
-
-    import xseof.mpl_orbpre.v01xx
-    import xseof.mpl_orbpre.v02xx
-    import xseof.mpl_orbpre.v03xx
-
-    import xseof.mpl_orbref.v01xx
-    import xseof.mpl_orbref.v02xx
-    import xseof.mpl_orbref.v03xx
-
-
-def parse(source):
-    _import_all()
-
-    parser = XmlParser()
-
-    return parser.parse(source)
+    The input stream can be a filename, a file like object (open in
+    binary mode) or an xml ElementTree.
+    """
+    for mod in (xseof.aux_orbdop, xseof.aux_orbdor, xseof.aux_orbres,
+                xseof.int_attref, xseof.mpl_orbpre, xseof.mpl_orbref):
+        try:
+            return mod.load(source)
+        except ParserError:
+            pass
+    else:
+        raise ParserError(f"Unable to parse {source}")
 
 
 def from_string(source: Union[str, bytes]):
-    _import_all()
-
-    parser = XmlParser()
-
-    if isinstance(source, str):
-        parse = parser.from_string
+    """Load on EOF onject from the source string or bytes string."""
+    for mod in (xseof.aux_orbdop, xseof.aux_orbdor, xseof.aux_orbres,
+                xseof.int_attref, xseof.mpl_orbpre, xseof.mpl_orbref):
+        try:
+            return mod.from_string(source)
+        except ParserError:
+            pass
     else:
-        parse = parser.from_bytes
-
-    return parse(source)
+        raise ParserError(f"Unable to parse {source}")
