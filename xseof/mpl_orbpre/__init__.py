@@ -19,8 +19,12 @@ def load(source):
 
     parser = XmlParser()
 
+    pos = source.tell() if hasattr(source, "tell") else None
+
     for pkg in v03xx, v02xx, v01xx:
         try:
+            if pos is not None:
+                source.seek(pos)
             return parser.parse(source, getattr(pkg, _type_name))
         except ParserError:
             pass
