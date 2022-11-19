@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .orbit_types_0100 import ListOfOsvsType
+from ..common.orbit_types_0100 import ListOfOsvsType
 
 __NAMESPACE__ = "http://eop-cfi.esa.int/CFI"
 

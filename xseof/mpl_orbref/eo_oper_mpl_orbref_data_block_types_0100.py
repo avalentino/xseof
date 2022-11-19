@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .orbit_types_0100 import (
+from ..common.orbit_types_0100 import (
     ListOfOsvsType,
     ListOfOrbitChangesType,
 )

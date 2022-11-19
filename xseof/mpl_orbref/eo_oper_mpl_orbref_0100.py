@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from .basic_types_0100 import AnyTypeType
+from ..common.basic_types_0100 import AnyTypeType
 from .eo_oper_mpl_orbref_data_block_types_0100 import OrbitReferenceDataBlockType
-from .header_types_0100 import FixedHeaderType
+from ..common.header_types_0100 import FixedHeaderType
 
 __NAMESPACE__ = "http://eop-cfi.esa.int/CFI"
 

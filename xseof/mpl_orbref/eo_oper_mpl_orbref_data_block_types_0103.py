@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from .orbit_types_0103 import (
+from ..common.orbit_types_0103 import (
     ListOfOsvsType,
     ListOfOrbitChangesType,
 )

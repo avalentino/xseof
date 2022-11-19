@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from .basic_types_0201 import AnyTypeType
-from .header_types_0203 import FixedHeaderType
+from ..common.basic_types_0201 import AnyTypeType
+from ..common.header_types_0203 import FixedHeaderType
 
 __NAMESPACE__ = "http://eop-cfi.esa.int/CFI"
 

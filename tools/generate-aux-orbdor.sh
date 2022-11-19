@@ -24,3 +24,4 @@ do
     xsdata generate -ss filenames -p ${PKG} ${XSDROOT}
 done
 python3 ${TOOLSDIR}/fix-names.py ${PKG_PATH}
+python3 ${TOOLSDIR}/move-to-common.py ${PKG_PATH}

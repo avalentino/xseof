@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from .orbit_types_0104 import ListOfOsvsType
+from ..common.orbit_types_0104 import ListOfOsvsType
 
 __NAMESPACE__ = "http://eop-cfi.esa.int/CFI"
 

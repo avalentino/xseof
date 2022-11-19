@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from .header_types_0200 import (
+from ..common.header_types_0200 import (
     FixedHeaderType,
     OrbitFileVariableHeader,
 )

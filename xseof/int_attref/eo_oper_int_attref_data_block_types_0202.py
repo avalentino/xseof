@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
-from .basic_types_0201 import AngleType
+from ..common.basic_types_0201 import AngleType
 from .time_types_0201 import TimeReferenceType
 
 __NAMESPACE__ = "http://eop-cfi.esa.int/CFI"
