@@ -6,16 +6,22 @@ import argparse
 
 BLACKLIST = (
     "*/__init__.py",
+    "*/eo_*.py",
+)
+
+
+OVERWRITE_PATTERNS = (
     "xseof/int_attref/time_types_0101.py",
     "xseof/int_attref/time_types_0102.py",
     "xseof/int_attref/time_types_0200.py",
     "xseof/int_attref/time_types_0201.py",
     "xseof/int_attref/time_types_0300.py",
-    "*/eo_*.py",
 )
 
 
-def move_to_common(root, blacklist=BLACKLIST):
+def move_to_common(
+    root, blacklist=BLACKLIST, overwrite_patterns=OVERWRITE_PATTERNS,
+):
     root = pathlib.Path(root)
     substitutions = {}
     for filename in root.glob("*.py"):
@@ -23,7 +29,10 @@ def move_to_common(root, blacklist=BLACKLIST):
             continue
         substitutions[f" .{filename.stem}"] = f" ..common.{filename.stem}"
         new_path = filename.parent.parent.joinpath("common", filename.name)
-        if new_path.exists():
+        overwrite = any(
+            filename.match(pattern) for pattern in overwrite_patterns
+        )
+        if new_path.exists() and not overwrite:
             common_data = new_path.read_text()
             data = filename.read_text()
             if data != common_data:
@@ -34,6 +43,7 @@ def move_to_common(root, blacklist=BLACKLIST):
             filename.unlink()
         else:
             print(f"move: {str(filename)!r} --> {str(new_path)!r}")
+            new_path.unlink()  # compatibility with windows
             filename.rename(new_path)
 
     for filename in root.glob("*.py"):

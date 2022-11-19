@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
+from enum import Enum
 from typing import Optional
 
 __NAMESPACE__ = "http://eop-cfi.esa.int/CFI"
@@ -24,6 +25,13 @@ class SecondsTimeType:
             "required": True,
         }
     )
+
+
+class TimeReferenceType(Enum):
+    UTC = "UTC"
+    UT1 = "UT1"
+    TAI = "TAI"
+    GPS = "GPS"
 
 
 @dataclass
