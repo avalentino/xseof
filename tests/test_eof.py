@@ -9,6 +9,9 @@ import xseof
 import xseof.aux_orbdop
 import xseof.aux_orbdor
 import xseof.aux_orbres
+import xseof.int_attref
+import xseof.mpl_orbpre
+import xseof.mpl_orbref
 
 
 DATADIR = pathlib.Path(__file__).parent / "data"

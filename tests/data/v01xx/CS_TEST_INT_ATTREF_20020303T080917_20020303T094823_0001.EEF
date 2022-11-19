@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<Earth_Explorer_File xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://eop-cfi.esa.int/CFI http://eop-cfi.esa.int/CFI/EE_CFI_SCHEMAS/EO_OPER_INT_ATTREF_0101.XSD"
+  xmlns="http://eop-cfi.esa.int/CFI" schemaVersion="1.1">
+  <Earth_Explorer_Header>
+    <Fixed_Header>
+      <File_Name>CS_TEST_INT_ATTREF_20020303T080917_20020303T094823_0001</File_Name>
+      <File_Description>Attitude File</File_Description>
+      <Notes>
+                 WARNING: this is an example of file compliant with formats defined and supported
+                          within the Earth Observation Mission CFI Software.
+                          This file does not reflect the actual satellite orbit
+                          attitude or instrument configuration.
+                          This file shall not be used in production environments.
+      </Notes>
+      <Mission>CryoSat</Mission>
+      <File_Class>TEST</File_Class>
+      <File_Type>INT_ATTCFG</File_Type>
+      <Validity_Period>
+        <Validity_Start>UTC=2002-03-03T08:09:17</Validity_Start>
+        <Validity_Stop>UTC=2002-03-03T09:48:23</Validity_Stop>
+      </Validity_Period>
+      <File_Version>0001</File_Version>
+      <Source>
+        <System>System Identification as per Ground Segment File Format Standard (PE-TN-ESA-GS-0001)</System>
+        <Creator>Creator Identification as per Ground Segment File Format Standard (PE-TN-ESA-GS-0001)</Creator>
+        <Creator_Version>Creator Version Identification as per Ground Segment File Format Standard (PE-TN-ESA-GS-0001)</Creator_Version>
+        <Creation_Date>UTC=2003-11-28T17:25:44</Creation_Date>
+      </Source>
+    </Fixed_Header>
+    <Variable_Header></Variable_Header>
+  </Earth_Explorer_Header>
+  <Data_Block type="xml">
+    <Attitude_File_Type>Sat_Attitude</Attitude_File_Type>
+    <Attitude_Data_Type>Quaternions</Attitude_Data_Type>
+    <Max_Gap unit="s">200</Max_Gap>
+    <Quaternion_Data>
+      <Inertial_Ref_Frame>QUASI_TRUE_DATE</Inertial_Ref_Frame>
+      <List_of_Quaternions count="5">
+        <Quaternions>
+          <Time ref="TAI">TAI=2004-07-04T18:26:33.000000</Time>
+          <Q1>0.205523</Q1>
+          <Q2>0.694593</Q2>
+          <Q3>-0.029401</Q3>
+          <Q4>0.688793</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="TAI">TAI=2004-07-04T18:26:33.600000</Time>
+          <Q1>0.205315</Q1>
+          <Q2>0.694556</Q2>
+          <Q3>-0.029188</Q3>
+          <Q4>0.688902</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="TAI">TAI=2004-07-04T18:26:34.200000</Time>
+          <Q1>0.205107</Q1>
+          <Q2>0.694518</Q2>
+          <Q3>-0.028975</Q3>
+          <Q4>0.689011</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="TAI">TAI=2004-07-04T18:26:34.800000</Time>
+          <Q1>0.204899</Q1>
+          <Q2>0.694481</Q2>
+          <Q3>-0.028762</Q3>
+          <Q4>0.689119</Q4>
+        </Quaternions>
+        <Quaternions>
+          <Time ref="TAI">TAI=2004-07-04T18:26:35.400000</Time>
+          <Q1>0.204691</Q1>
+          <Q2>0.694443</Q2>
+          <Q3>-0.028549</Q3>
+          <Q4>0.689228</Q4>
+        </Quaternions>
+      </List_of_Quaternions>
+    </Quaternion_Data>
+  </Data_Block>
+</Earth_Explorer_File>
