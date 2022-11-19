@@ -4,8 +4,39 @@ from typing import Union
 from xsdata.exceptions import ParserError
 from xsdata.formats.dataclass.parsers import XmlParser
 
+from .eo_oper_aux_orbdop_0100 import (  # noqa: F401
+    EarthExplorerFile as AuxOrbDopFileV0100,
+)
+from .eo_oper_aux_orbdop_0101 import (  # noqa: F401
+    EarthExplorerFile as AuxOrbDopFileV0101,
+)
+from .eo_oper_aux_orbdop_0102 import (  # noqa: F401
+    EarthExplorerFile as AuxOrbDopFileV0102,
+)
+from .eo_oper_aux_orbdop_0103 import (  # noqa: F401
+    EarthExplorerFile as AuxOrbDopFileV0103,
+)
+from .eo_oper_aux_orbdop_0104 import (  # noqa: F401
+    EarthExplorerFile as AuxOrbDopFileV0104,
+)
+from .eo_oper_aux_orbdop_0105 import (  # noqa: F401
+    EarthExplorerFile as AuxOrbDopFileV0105,
+)
+from .eo_oper_aux_orbdop_0200 import (  # noqa: F401
+    EarthExplorerFile as AuxOrbDopFileV0200,
+)
+from .eo_oper_aux_orbdop_0201 import (  # noqa: F401
+    EarthExplorerFile as AuxOrbDopFileV0201,
+)
+from .eo_oper_aux_orbdop_0202 import (  # noqa: F401
+    EarthExplorerFile as AuxOrbDopFileV0202,
+)
+from .eo_oper_aux_orbdop_0300 import (  # noqa: F401
+    EarthObservationFile as AuxOrbDopFileV0300,
+)
 
-_type_name = "DorisPreliminaryFileType"
+
+_type_name = "AuxOrbDopFile"
 _type_description = __doc__.rstrip(".")
 
 
@@ -15,17 +46,20 @@ def load(source):
     The input stream can be a filename, a file like object (open in
     binary mode) or an xml ElementTree.
     """
-    from . import v01xx, v02xx, v03xx
-
     parser = XmlParser()
 
     pos = source.tell() if hasattr(source, "tell") else None
 
-    for pkg in v03xx, v02xx, v01xx:
+    classes = [
+        clazz for name, clazz in globals().items()
+        if name.startswith(_type_name)
+    ]
+
+    for clazz in classes:
         try:
             if pos is not None:
                 source.seek(pos)
-            return parser.parse(source, getattr(pkg, _type_name))
+            return parser.parse(source, clazz)
         except ParserError:
             pass
     else:
@@ -35,8 +69,6 @@ def load(source):
 
 def from_string(source: Union[str, bytes]):
     """Load DORIS Preliminary Orbit from the source string or bytes string."""
-    from . import v01xx, v02xx, v03xx
-
     parser = XmlParser()
 
     if isinstance(source, str):
@@ -44,9 +76,14 @@ def from_string(source: Union[str, bytes]):
     else:
         parse = parser.from_bytes
 
-    for pkg in v03xx, v02xx, v01xx:
+    classes = [
+        clazz for name, clazz in globals().items()
+        if name.startswith(_type_name)
+    ]
+
+    for clazz in classes:
         try:
-            return parse(source, getattr(pkg, _type_name))
+            return parse(source, clazz)
         except ParserError:
             pass
     else:
