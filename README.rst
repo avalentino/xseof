@@ -42,8 +42,6 @@ Move to the the source directory root and run the following command::
 Basic usage
 -----------
 
-.. highlight:: python
-
 Load a generic orbit file::
 
     >>> import xseof
