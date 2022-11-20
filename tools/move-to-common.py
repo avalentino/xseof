@@ -18,9 +18,14 @@ OVERWRITE_PATTERNS = (
     "xseof/int_attref/time_types_0300.py",
 )
 
+RELAXCHECKS = (
+    "*/time_types_*.py",
+)
+
 
 def move_to_common(
     root, blacklist=BLACKLIST, overwrite_patterns=OVERWRITE_PATTERNS,
+    relaxcheck=RELAXCHECKS,
 ):
     root = pathlib.Path(root)
     substitutions = {}
@@ -35,7 +40,8 @@ def move_to_common(
         if new_path.exists() and not overwrite:
             common_data = new_path.read_text()
             data = filename.read_text()
-            if data != common_data:
+            skipcheck = any(filename.match(pattern) for pattern in relaxcheck)
+            if data != common_data and not skipcheck:
                 raise RuntimeError(
                     f"modules with the same name have different content: "
                     f"'{filename}', '{new_path}'"
