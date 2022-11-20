@@ -218,6 +218,7 @@ def test_from_bytes_mpl_orbref(filename):
 
 @pytest.mark.parametrize("filename", S1X_XXXORB)
 def test_load_s1_orb(filename):
+    pytest.importorskip("lxml")
     obj = xseof.load(filename)
     header = _get_header(obj)
     assert header.fixed_header.file_name == filename.stem
