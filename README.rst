@@ -42,21 +42,20 @@ Move to the the source directory root and run the following command::
 Basic usage
 -----------
 
+.. highlight:: python
+
 Load a generic orbit file::
 
     >>> import xseof
-
     >>> orbit = xseof.load(
             "MA1_TEST_AUX_ORBRES_20210610T045753_20210610T065853_0001.EOF")
+
 
 Access and print loaded data::
 
     >>> import pprint
-
     >>> orbit.earth_observation_header.fixed_header.notes = ""
-
     >>> pprint.pprint(orbit.earth_observation_header.fixed_header)
-
     FixedHeaderType(
         file_name='MA1_TEST_AUX_ORBRES_20210610T045753_20210610T065853_0001',
         file_description='FOS Orbit File',
@@ -83,11 +82,8 @@ Access and print loaded data::
                         creation_date='UTC=2022-06-23T10:06:43'))
 
     >>> print(orbit.data_block.list_of_osvs.count)
-
     10
-
     >>> pprint.pprint(orbit.data_block.list_of_osvs.osv[0])
-
     OsvType(tai='TAI=2021-06-10T04:57:17.817060',
         utc='UTC=2021-06-10T04:57:52.817060',
         ut1='UT1=2021-06-10T04:57:53.117059',
@@ -100,22 +96,21 @@ Access and print loaded data::
         vz=VelocityComponentType(value=Decimal('5985.303441'), unit='m/s'),
         quality='0000000000000')
 
+
 Load an EOF file of a specific type::
 
-    from xseof import int_attref
-
-    quaternions = int_attref.load(
+    >>> from xseof import int_attref
+    >>> quaternions = int_attref.load(
         "MA1_TEST_INT_ATTREF_20210610T045753_20210610T065853_0001.EOF")
 
 
 Load data form string::
 
-    from xseof import aux_orbres
-
-    filename = "MA1_TEST_AUX_ORBRES_20210610T045753_20210610T065853_0001.EOF"
-    with open(filename) as fd:
-        data = fd.read()
-    orbit = aux_orbres.from_string(data)
+    >>> from xseof import aux_orbres
+    >>> filename = "MA1_TEST_AUX_ORBRES_20210610T045753_20210610T065853_0001.EOF"
+    >>> with open(filename) as fd:
+    ...     data = fd.read()
+    >>> orbit = aux_orbres.from_string(data)
 
 
 Licanse
