@@ -22,7 +22,7 @@ from . import mpl_orbpre  # noqa: F401
 from . import mpl_orbref  # noqa: F401
 
 
-__version__ = "1.0.0.dev0"
+__version__ = "1.0.0"
 
 
 def _fix_namespaces(source: Union[str, bytes]) -> Union[str, bytes]:
