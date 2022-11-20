@@ -38,35 +38,13 @@ from .eo_oper_mpl_orbref_0300 import (  # noqa: F401
     EarthObservationFile as MplOrbRefFileV0300,
 )
 
+
 _type_name = "MplOrbRefFile"
 _type_description = __doc__.rstrip(".")
-
-
-def load(source):
-    """Load a Reference Orbit Event from the source stream.
-
-    The input stream can be a filename, a file like object (open in
-    binary mode) or an xml ElementTree.
-    """
-    parser = XmlParser()
-
-    pos = source.tell() if hasattr(source, "tell") else None
-
-    classes = [
-        clazz for name, clazz in globals().items()
-        if name.startswith(_type_name)
-    ]
-
-    for clazz in classes:
-        try:
-            if pos is not None:
-                source.seek(pos)
-            return parser.parse(source, clazz)
-        except ParserError:
-            pass
-    else:
-        raise ParserError(
-            f"Unable to load DORIS {_type_description} form {source}")
+_type_classes = tuple(
+    clazz for name, clazz in sorted(globals().items(), reverse=True)
+    if name.startswith(_type_name)
+)
 
 
 def from_string(source: Union[str, bytes]):
@@ -78,15 +56,30 @@ def from_string(source: Union[str, bytes]):
     else:
         parse = parser.from_bytes
 
-    classes = [
-        clazz for name, clazz in globals().items()
-        if name.startswith(_type_name)
-    ]
-
-    for clazz in classes:
+    for clazz in _type_classes:
         try:
             return parse(source, clazz)
         except ParserError:
             pass
     else:
         raise ParserError(f"Unable to load {_type_description}")
+
+
+def load(source):
+    """Load a Reference Orbit Event from the source stream.
+
+    The input stream can be a filename, a file like object (open in
+    binary mode) or an xml ElementTree.
+    """
+    if hasattr(source, "read"):
+        return from_string(source.read())
+
+    parser = XmlParser()
+    for clazz in _type_classes:
+        try:
+            return parser.parse(source, clazz)
+        except ParserError:
+            pass
+    else:
+        raise ParserError(
+            f"Unable to load DORIS {_type_description} form {source}")
