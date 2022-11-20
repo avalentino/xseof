@@ -10,19 +10,59 @@ products.
 .. _xsdata: https://github.com/tefra/xsdata
 """
 
-
 from typing import Union
 from xsdata.exceptions import ParserError
+from xsdata.formats.dataclass.parsers import XmlParser
 
-import xseof.aux_orbdop
-import xseof.aux_orbdor
-import xseof.aux_orbres
-import xseof.int_attref
-import xseof.mpl_orbpre
-import xseof.mpl_orbref
+from . import aux_orbdop  # noqa: F401
+from . import aux_orbdor  # noqa: F401
+from . import aux_orbres  # noqa: F401
+from . import int_attref  # noqa: F401
+from . import mpl_orbpre  # noqa: F401
+from . import mpl_orbref  # noqa: F401
 
 
 __version__ = "1.0.0.dev0"
+
+
+def _fix_namespaces(source: Union[str, bytes]) -> Union[str, bytes]:
+    from lxml import etree
+
+    root_tags = {"Earth_Explorer_File", "Earth_Observation_File"}
+
+    root = etree.fromstring(source)
+    if root.tag not in root_tags or root.nsmap:
+        raise ValueError()
+
+    nsmap = {
+        "xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        None: "http://eop-cfi.esa.int/CFI",
+    }
+    root2 = etree.Element(root.tag, attrib=root.attrib, nsmap=nsmap)
+    root2[:] = root[:]
+    xml2 = etree.ElementTree(root2)
+
+    return etree.tostring(xml2, pretty_print=True, xml_declaration=True)
+
+
+def from_string(source: Union[str, bytes]):
+    """Load on EOF onject from the source string or bytes string."""
+    parser = XmlParser()
+
+    if isinstance(source, str):
+        parse = parser.from_string
+    else:
+        parse = parser.from_bytes
+
+    try:
+        return parse(source)
+    except ParserError:
+        try:
+            source = _fix_namespaces(source)
+            return parse(source)
+        except (ImportError, SyntaxError):
+            pass
+        raise
 
 
 def load(source):
@@ -31,23 +71,14 @@ def load(source):
     The input stream can be a filename, a file like object (open in
     binary mode) or an xml ElementTree.
     """
-    for mod in (xseof.aux_orbdop, xseof.aux_orbdor, xseof.aux_orbres,
-                xseof.int_attref, xseof.mpl_orbpre, xseof.mpl_orbref):
-        try:
-            return mod.load(source)
-        except ParserError:
-            pass
+    if hasattr(source, "tell"):
+        data = source.read()
+        return from_string(data)
     else:
-        raise ParserError(f"Unable to parse {source}")
-
-
-def from_string(source: Union[str, bytes]):
-    """Load on EOF onject from the source string or bytes string."""
-    for mod in (xseof.aux_orbdop, xseof.aux_orbdor, xseof.aux_orbres,
-                xseof.int_attref, xseof.mpl_orbpre, xseof.mpl_orbref):
         try:
-            return mod.from_string(source)
+            parser = XmlParser()
+            return parser.parse(source)
         except ParserError:
-            pass
-    else:
-        raise ParserError(f"Unable to parse {source}")
+            with open(source, "rb") as fd:
+                source = fd.read()
+            return from_string(source)

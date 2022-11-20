@@ -1,0 +1,162 @@
+<?xml version="1.0" ?>
+<Earth_Explorer_File>
+  <Earth_Explorer_Header>
+    <Fixed_Header>
+      <File_Name>S1A_OPER_AUX_RESORB_OPOD_20221002T024115_V20221001T224030_20221002T015800</File_Name>
+      <File_Description>NRT POD Restituted Orbit File</File_Description>
+      <Notes></Notes>
+      <Mission>Sentinel-1A</Mission>
+      <File_Class>OPER</File_Class>
+      <File_Type>AUX_RESORB</File_Type>
+      <Validity_Period>
+        <Validity_Start>UTC=2022-10-01T22:40:30</Validity_Start>
+        <Validity_Stop>UTC=2022-10-02T01:58:00</Validity_Stop>
+      </Validity_Period>
+      <File_Version>0001</File_Version>
+      <Source>
+        <System>OPOD</System>
+        <Creator>OPOD</Creator>
+        <Creator_Version>1.11.7</Creator_Version>
+        <Creation_Date>UTC=2022-10-02T02:41:15</Creation_Date>
+      </Source>
+    </Fixed_Header>
+    <Variable_Header>
+      <Ref_Frame>EARTH_FIXED</Ref_Frame>
+      <Time_Reference>UTC</Time_Reference>
+    </Variable_Header>
+  </Earth_Explorer_Header>
+<Data_Block type="xml">
+  <List_of_OSVs count="10">
+    <OSV>
+      <TAI>TAI=2022-10-01T22:41:07.358185</TAI>
+      <UTC>UTC=2022-10-01T22:40:30.358185</UTC>
+      <UT1>UT1=2022-10-01T22:40:30.353645</UT1>
+      <Absolute_Orbit>+45254</Absolute_Orbit>
+      <X unit="m">2451935.385735</X>
+      <Y unit="m">-6638609.163647</Y>
+      <Z unit="m">-39913.485610</Z>
+      <VX unit="m/s">-1474.190102</VX>
+      <VY unit="m/s">-579.741143</VY>
+      <VZ unit="m/s">7430.105232</VZ>
+      <Quality>NOMINAL</Quality>
+    </OSV>
+    <OSV>
+      <TAI>TAI=2022-10-01T22:41:17.358185</TAI>
+      <UTC>UTC=2022-10-01T22:40:40.358185</UTC>
+      <UT1>UT1=2022-10-01T22:40:40.353645</UT1>
+      <Absolute_Orbit>+45255</Absolute_Orbit>
+      <X unit="m">2437052.316606</X>
+      <Y unit="m">-6644023.642623</Y>
+      <Z unit="m">34388.417899</Z>
+      <VX unit="m/s">-1502.377466</VX>
+      <VY unit="m/s">-503.137216</VY>
+      <VZ unit="m/s">7430.135614</VZ>
+      <Quality>NOMINAL</Quality>
+    </OSV>
+    <OSV>
+      <TAI>TAI=2022-10-01T22:41:27.358185</TAI>
+      <UTC>UTC=2022-10-01T22:40:50.358185</UTC>
+      <UT1>UT1=2022-10-01T22:40:50.353645</UT1>
+      <Absolute_Orbit>+45255</Absolute_Orbit>
+      <X unit="m">2421888.766805</X>
+      <Y unit="m">-6648671.574512</Y>
+      <Z unit="m">108686.430505</Z>
+      <VX unit="m/s">-1530.285678</VX>
+      <VY unit="m/s">-426.433248</VY>
+      <VZ unit="m/s">7429.327048</VZ>
+      <Quality>NOMINAL</Quality>
+    </OSV>
+    <OSV>
+      <TAI>TAI=2022-10-01T22:41:37.358185</TAI>
+      <UTC>UTC=2022-10-01T22:41:00.358185</UTC>
+      <UT1>UT1=2022-10-01T22:41:00.353645</UT1>
+      <Absolute_Orbit>+45255</Absolute_Orbit>
+      <X unit="m">2406447.544460</X>
+      <Y unit="m">-6652552.004387</Y>
+      <Z unit="m">182972.162746</Z>
+      <VX unit="m/s">-1557.911425</VX>
+      <VY unit="m/s">-349.638335</VY>
+      <VZ unit="m/s">7427.679561</VZ>
+      <Quality>NOMINAL</Quality>
+    </OSV>
+    <OSV>
+      <TAI>TAI=2022-10-01T22:41:47.358185</TAI>
+      <UTC>UTC=2022-10-01T22:41:10.358185</UTC>
+      <UT1>UT1=2022-10-01T22:41:10.353645</UT1>
+      <Absolute_Orbit>+45255</Absolute_Orbit>
+      <X unit="m">2390731.490604</X>
+      <Y unit="m">-6655664.068349</Y>
+      <Z unit="m">257237.225948</Z>
+      <VX unit="m/s">-1585.251440</VX>
+      <VY unit="m/s">-272.761587</VY>
+      <VZ unit="m/s">7425.193279</VZ>
+      <Quality>NOMINAL</Quality>
+    </OSV>
+    <OSV>
+      <TAI>TAI=2022-10-01T22:41:57.358185</TAI>
+      <UTC>UTC=2022-10-01T22:41:20.358185</UTC>
+      <UT1>UT1=2022-10-01T22:41:20.353645</UT1>
+      <Absolute_Orbit>+45255</Absolute_Orbit>
+      <X unit="m">2374743.478723</X>
+      <Y unit="m">-6658006.993686</Y>
+      <Z unit="m">331473.233226</Z>
+      <VX unit="m/s">-1612.302499</VX>
+      <VY unit="m/s">-195.812129</VY>
+      <VZ unit="m/s">7421.868427</VZ>
+      <Quality>NOMINAL</Quality>
+    </OSV>
+    <OSV>
+      <TAI>TAI=2022-10-01T22:42:07.358185</TAI>
+      <UTC>UTC=2022-10-01T22:41:30.358185</UTC>
+      <UT1>UT1=2022-10-01T22:41:30.353645</UT1>
+      <Absolute_Orbit>+45255</Absolute_Orbit>
+      <X unit="m">2358486.414298</X>
+      <Y unit="m">-6659580.099010</Y>
+      <Z unit="m">405671.800444</Z>
+      <VX unit="m/s">-1639.061425</VX>
+      <VY unit="m/s">-118.799101</VY>
+      <VZ unit="m/s">7417.705330</VZ>
+      <Quality>NOMINAL</Quality>
+    </OSV>
+    <OSV>
+      <TAI>TAI=2022-10-01T22:42:17.358185</TAI>
+      <UTC>UTC=2022-10-01T22:41:40.358185</UTC>
+      <UT1>UT1=2022-10-01T22:41:40.353645</UT1>
+      <Absolute_Orbit>+45255</Absolute_Orbit>
+      <X unit="m">2341963.234339</X>
+      <Y unit="m">-6660382.794362</Y>
+      <Z unit="m">479824.547186</Z>
+      <VX unit="m/s">-1665.525089</VX>
+      <VY unit="m/s">-41.731655</VY>
+      <VZ unit="m/s">7412.704409</VZ>
+      <Quality>NOMINAL</Quality>
+    </OSV>
+    <OSV>
+      <TAI>TAI=2022-10-01T22:42:27.358185</TAI>
+      <UTC>UTC=2022-10-01T22:41:50.358185</UTC>
+      <UT1>UT1=2022-10-01T22:41:50.353646</UT1>
+      <Absolute_Orbit>+45255</Absolute_Orbit>
+      <X unit="m">2325176.906931</X>
+      <Y unit="m">-6660414.581355</Y>
+      <Z unit="m">553923.097743</Z>
+      <VX unit="m/s">-1691.690405</VX>
+      <VY unit="m/s">35.381045</VY>
+      <VZ unit="m/s">7406.866183</VZ>
+      <Quality>NOMINAL</Quality>
+    </OSV>
+    <OSV>
+      <TAI>TAI=2022-10-01T22:42:37.358185</TAI>
+      <UTC>UTC=2022-10-01T22:42:00.358185</UTC>
+      <UT1>UT1=2022-10-01T22:42:00.353646</UT1>
+      <Absolute_Orbit>+45255</Absolute_Orbit>
+      <X unit="m">2308130.430772</X>
+      <Y unit="m">-6659675.053288</Y>
+      <Z unit="m">627959.082086</Z>
+      <VX unit="m/s">-1717.554336</VX>
+      <VY unit="m/s">112.529827</VY>
+      <VZ unit="m/s">7400.191272</VZ>
+      <Quality>NOMINAL</Quality>
+    </OSV>
+  </List_of_OSVs>
+</Data_Block>
+</Earth_Explorer_File>

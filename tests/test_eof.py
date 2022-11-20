@@ -22,6 +22,7 @@ AUX_ORBRES = tuple(DATADIR.glob("v0?xx/*_AUX_ORBRES_*.*"))
 INT_ATTREF = tuple(DATADIR.glob("v0?xx/*_INT_ATTREF_*.*"))
 MPL_ORBPRE = tuple(DATADIR.glob("v0?xx/*_MPL_ORBPRE_*.*"))
 MPL_ORBREF = tuple(DATADIR.glob("v0?xx/*_MPL_ORBREF_*.*"))
+S1X_XXXORB = tuple(DATADIR.glob("s1x/*_AUX_???ORB_*.EOF"))
 
 
 def _get_header(obj):
@@ -211,5 +212,12 @@ def test_from_string_mpl_orbref(filename):
 def test_from_bytes_mpl_orbref(filename):
     data = filename.read_bytes()
     obj = xseof.mpl_orbref.from_string(data)
+    header = _get_header(obj)
+    assert header.fixed_header.file_name == filename.stem
+
+
+@pytest.mark.parametrize("filename", S1X_XXXORB)
+def test_load_s1_orb(filename):
+    obj = xseof.load(filename)
     header = _get_header(obj)
     assert header.fixed_header.file_name == filename.stem
