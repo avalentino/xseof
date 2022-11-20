@@ -101,7 +101,7 @@ Load an EOF file of a specific type::
 
     >>> from xseof import int_attref
     >>> quaternions = int_attref.load(
-        "MA1_TEST_INT_ATTREF_20210610T045753_20210610T065853_0001.EOF")
+            "MA1_TEST_INT_ATTREF_20210610T045753_20210610T065853_0001.EOF")
 
 
 Load data form string::
