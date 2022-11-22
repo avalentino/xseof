@@ -30,6 +30,10 @@ Standard installation via pip_::
 
     $ pip install xseof
 
+Installation via conda_::
+
+    $ conda install -c avalentino xseof
+
 
 Testing
 -------
@@ -130,6 +134,7 @@ See the License for the specific langua
 
 .. _xsdata: https://github.com/tefra/xsdata
 .. _pip: https://pip.pypa.io
+.. _conda: https://docs.conda.io
 
 .. [1] https://eop-cfi.esa.int/Repo/PUBLIC/DOCUMENTATION/SYSTEM_SUPPORT_DOCS/PE-TN-ESA-GS-0001%20EO%20GS%20File%20Format%20Standard%203.0%20signed.pdf
 
