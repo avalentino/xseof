@@ -59,7 +59,7 @@ def from_string(source: Union[str, bytes]):
     except ParserError:
         try:
             source = _fix_namespaces(source)
-            return parse(source)
+            return parser.from_bytes(source)
         except (ImportError, SyntaxError):
             pass
         raise

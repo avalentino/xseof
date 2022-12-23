@@ -222,3 +222,21 @@ def test_load_s1_orb(filename):
     obj = xseof.load(filename)
     header = _get_header(obj)
     assert header.fixed_header.file_name == filename.stem
+
+
+@pytest.mark.parametrize("filename", S1X_XXXORB)
+def test_load_s1_orb_from_string(filename):
+    pytest.importorskip("lxml")
+    xml_string = filename.read_text()
+    obj = xseof.from_string(xml_string)
+    header = _get_header(obj)
+    assert header.fixed_header.file_name == filename.stem
+
+
+@pytest.mark.parametrize("filename", S1X_XXXORB)
+def test_load_s1_orb_from_bytes(filename):
+    pytest.importorskip("lxml")
+    xml_bytes = filename.read_bytes()
+    obj = xseof.from_string(xml_bytes)
+    header = _get_header(obj)
+    assert header.fixed_header.file_name == filename.stem
