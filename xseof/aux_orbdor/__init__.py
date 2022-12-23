@@ -66,7 +66,7 @@ def load(source):
     """Load a Doris Precise Orbit from the source stream.
 
     The input stream can be a filename, a file like object (open in
-    binary mode) or an xml ElementTree.
+    binary mode) or an xml ElementTree (lxml is needed for the latter).
     """
     if hasattr(source, "read"):
         return from_string(source.read())

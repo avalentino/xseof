@@ -74,7 +74,7 @@ def load(source, strict: bool = False):
     """Load an EOF object from the source stream.
 
     The input stream can be a filename, a file like object (open in
-    binary mode) or an xml ElementTree.
+    binary mode) or an xml ElementTree (lxml is needed for the latter).
 
     The `strict` parameter (default: `False`) enforces stricy checking
     of XML namespaces.

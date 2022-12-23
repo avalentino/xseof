@@ -63,6 +63,15 @@ def test_load_from_bytesio(filename):
 
 
 @pytest.mark.parametrize("filename", AUX_ORBRES)
+def test_load_from_xmldoc(filename):
+    etree = pytest.importorskip("lxml.etree")
+    xmldoc = etree.parse(filename)
+    obj = xseof.load(xmldoc)
+    header = _get_header(obj)
+    assert header.fixed_header.file_name == filename.stem
+
+
+@pytest.mark.parametrize("filename", AUX_ORBRES)
 def test_from_string(filename):
     data = filename.read_text()
     obj = xseof.from_string(data)
