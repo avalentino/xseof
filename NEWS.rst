@@ -10,6 +10,7 @@ xseof v1.1.0 (UNRELEASED)
 * Improve docstrings to clarify that `lxml` is needed to use an `ElementTree`
   as source for the `xseof.load` and `xseof.*.load` functions.
   A dedicated unit test has been added also.
+* Test coverage improved.
 
 
 xseof v1.0.0 (20/11/2022)

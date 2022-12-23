@@ -34,6 +34,9 @@ from .eo_oper_mpl_orbref_0201 import (  # noqa: F401
 from .eo_oper_mpl_orbref_0202 import (  # noqa: F401
     EarthExplorerFile as MplOrbRefFileV0202,
 )
+from .eo_oper_mpl_orbref_0203 import (  # noqa: F401
+    EarthExplorerFile as MplOrbRefFileV0203,
+)
 from .eo_oper_mpl_orbref_0300 import (  # noqa: F401
     EarthObservationFile as MplOrbRefFileV0300,
 )

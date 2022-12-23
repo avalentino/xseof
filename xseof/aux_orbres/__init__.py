@@ -31,6 +31,9 @@ from .eo_oper_aux_orbres_0201 import (  # noqa: F401
 from .eo_oper_aux_orbres_0202 import (  # noqa: F401
     EarthExplorerFile as AuxOrbResFileV0202,
 )
+from .eo_oper_aux_orbres_0203 import (  # noqa: F401
+    EarthExplorerFile as AuxOrbResFileV0203,
+)
 from .eo_oper_aux_orbres_0300 import (  # noqa: F401
     EarthObservationFile as AuxOrbResFileV0300,
 )

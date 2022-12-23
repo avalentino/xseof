@@ -31,6 +31,9 @@ from .eo_oper_aux_orbdor_0201 import (  # noqa: F401
 from .eo_oper_aux_orbdor_0202 import (  # noqa: F401
     EarthExplorerFile as AuxOrbDorFileV0202,
 )
+from .eo_oper_aux_orbdor_0203 import (  # noqa: F401
+    EarthExplorerFile as AuxOrbDorFileV0203,
+)
 from .eo_oper_aux_orbdor_0300 import (  # noqa: F401
     EarthObservationFile as AuxOrbDorFileV0300,
 )

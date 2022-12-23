@@ -32,7 +32,9 @@ def _fix_namespaces(source: Union[str, bytes]) -> Union[str, bytes]:
 
     root = etree.fromstring(source)
     if root.tag not in root_tags or root.nsmap:
-        raise ValueError()
+        if hasattr(source, 'encode'):
+            source = source.encode("utf-8")
+        return source
 
     nsmap = {
         "xsi": "http://www.w3.org/2001/XMLSchema-instance",
