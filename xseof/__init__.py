@@ -45,8 +45,12 @@ def _fix_namespaces(source: Union[str, bytes]) -> Union[str, bytes]:
     return etree.tostring(xml2, pretty_print=True, xml_declaration=True)
 
 
-def from_string(source: Union[str, bytes]):
-    """Load on EOF onject from the source string or bytes string."""
+def from_string(source: Union[str, bytes], strict: bool = False):
+    """Load on EOF onject from the source string or bytes string.
+    
+    The `strict` parameter (default: `False`) enforces stricy checking
+    of XML namespaces.
+    """
     parser = XmlParser()
 
     if isinstance(source, str):
@@ -57,23 +61,27 @@ def from_string(source: Union[str, bytes]):
     try:
         return parse(source)
     except ParserError:
-        try:
-            source = _fix_namespaces(source)
-            return parser.from_bytes(source)
-        except (ImportError, SyntaxError):
-            pass
+        if not strict:
+            try:
+                source = _fix_namespaces(source)
+                return parser.from_bytes(source)
+            except (ImportError, SyntaxError):
+                pass
         raise
 
 
-def load(source):
+def load(source, strict: bool = False):
     """Load an EOF object from the source stream.
 
     The input stream can be a filename, a file like object (open in
     binary mode) or an xml ElementTree.
+
+    The `strict` parameter (default: `False`) enforces stricy checking
+    of XML namespaces.
     """
     if hasattr(source, "tell"):
         data = source.read()
-        return from_string(data)
+        return from_string(data, strict=strict)
     else:
         try:
             parser = XmlParser()
@@ -81,4 +89,4 @@ def load(source):
         except ParserError:
             with open(source, "rb") as fd:
                 source = fd.read()
-            return from_string(source)
+            return from_string(source, strict=strict)
