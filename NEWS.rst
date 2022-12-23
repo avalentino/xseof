@@ -1,7 +1,7 @@
 Version history
 ===============
 
-xseof v1.1.0 (UNRELEASED)
+xseof v1.1.0 (23/12/2022)
 -------------------------
 
 * Fix loading of Sentine-1 orbit form string.
