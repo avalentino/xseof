@@ -4,7 +4,8 @@ Version history
 xseof v1.1.1 (UNRELEASED)
 -------------------------
 
-* Improve robustness in th edetection of EOF files.
+* Improve robustness in EOF files detection.
+* Improve support for element-tree imputs.
 
 
 xseof v1.1.0 (23/12/2022)
