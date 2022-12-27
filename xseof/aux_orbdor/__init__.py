@@ -1,5 +1,6 @@
 """Doris Precise Orbit File."""
 
+import copy
 from typing import Union
 from xsdata.exceptions import ParserError
 from xsdata.formats.dataclass.parsers import XmlParser
@@ -65,6 +66,22 @@ def from_string(source: Union[str, bytes]):
         raise ParserError(f"Unable to load {_type_description}")
 
 
+def _from_xml(source):
+    xmldoc = source
+    source = copy.deepcopy(xmldoc)
+
+    parser = XmlParser()
+    for clazz in _type_classes:
+        # see https://github.com/tefra/xsdata/issues/683
+        source = copy.deepcopy(xmldoc)
+        try:
+            return parser.parse(source, clazz)
+        except ParserError:
+            pass
+    else:
+        raise ParserError(f"Unable to load {_type_description} from XML")
+
+
 def load(source):
     """Load a Doris Precise Orbit from the source stream.
 
@@ -73,6 +90,8 @@ def load(source):
     """
     if hasattr(source, "read"):
         return from_string(source.read())
+    elif hasattr(source, "getroot") or hasattr(source, "tag"):
+        return _from_xml(source)
 
     parser = XmlParser()
     for clazz in _type_classes:
@@ -81,5 +100,4 @@ def load(source):
         except ParserError:
             pass
     else:
-        raise ParserError(
-            f"Unable to load DORIS {_type_description} form {source}")
+        raise ParserError(f"Unable to load {_type_description} from {source}")

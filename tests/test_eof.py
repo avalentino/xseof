@@ -63,11 +63,20 @@ def test_load_from_bytesio(filename):
     assert header.fixed_header.file_name == filename.stem
 
 
-@pytest.mark.parametrize("filename", AUX_ORBRES)
+@pytest.mark.parametrize("filename", AUX_ORBRES + INT_ATTREF)
 def test_load_from_xmldoc(filename):
     etree = pytest.importorskip("lxml.etree")
     xmldoc = etree.parse(filename)
     obj = xseof.load(xmldoc)
+    header = _get_header(obj)
+    assert header.fixed_header.file_name == filename.stem
+
+
+@pytest.mark.parametrize("filename", AUX_ORBRES + INT_ATTREF)
+def test_load_from_xmldoc_strict(filename):
+    etree = pytest.importorskip("lxml.etree")
+    xmldoc = etree.parse(filename)
+    obj = xseof.load(xmldoc, strict=True)
     header = _get_header(obj)
     assert header.fixed_header.file_name == filename.stem
 
@@ -100,6 +109,15 @@ def test_load_aux_orbdop(filename):
 def test_load_fd_aux_orbdop(filename):
     with open(filename) as fd:
         obj = xseof.aux_orbdop.load(fd)
+    header = _get_header(obj)
+    assert header.fixed_header.file_name == filename.stem
+
+
+@pytest.mark.parametrize("filename", AUX_ORBDOP[:1])
+def test_load_xml_aux_orbdop(filename):
+    etree = pytest.importorskip("lxml.etree")
+    xmldoc = etree.parse(filename)
+    obj = xseof.aux_orbdop.load(xmldoc)
     header = _get_header(obj)
     assert header.fixed_header.file_name == filename.stem
 
@@ -142,6 +160,15 @@ def test_load_fd_aux_orbdor(filename):
     assert header.fixed_header.file_name == filename.stem
 
 
+@pytest.mark.parametrize("filename", AUX_ORBDOR[:1])
+def test_load_xml_aux_orbdor(filename):
+    etree = pytest.importorskip("lxml.etree")
+    xmldoc = etree.parse(filename)
+    obj = xseof.aux_orbdor.load(xmldoc)
+    header = _get_header(obj)
+    assert header.fixed_header.file_name == filename.stem
+
+
 @pytest.mark.parametrize("filename", INT_ATTREF[:1])
 def test_load_invalid_aux_orbdor(filename):
     with pytest.raises(xseof.ParserError):
@@ -176,6 +203,15 @@ def test_load_aux_orbres(filename):
 def test_load_fd_aux_orbres(filename):
     with open(filename) as fd:
         obj = xseof.aux_orbres.load(fd)
+    header = _get_header(obj)
+    assert header.fixed_header.file_name == filename.stem
+
+
+@pytest.mark.parametrize("filename", AUX_ORBRES[:1])
+def test_load_xml_aux_orbres(filename):
+    etree = pytest.importorskip("lxml.etree")
+    xmldoc = etree.parse(filename)
+    obj = xseof.aux_orbres.load(xmldoc)
     header = _get_header(obj)
     assert header.fixed_header.file_name == filename.stem
 
@@ -218,6 +254,15 @@ def test_load_fd_int_attref(filename):
     assert header.fixed_header.file_name == filename.stem
 
 
+@pytest.mark.parametrize("filename", INT_ATTREF[:1])
+def test_load_xml_int_attref(filename):
+    etree = pytest.importorskip("lxml.etree")
+    xmldoc = etree.parse(filename)
+    obj = xseof.int_attref.load(xmldoc)
+    header = _get_header(obj)
+    assert header.fixed_header.file_name == filename.stem
+
+
 @pytest.mark.parametrize("filename", AUX_ORBDOP[:1])
 def test_load_invalid_int_attref(filename):
     with pytest.raises(xseof.ParserError):
@@ -252,6 +297,15 @@ def test_load_mpl_orbpre(filename):
 def test_load_fd_mpl_orbpre(filename):
     with open(filename) as fd:
         obj = xseof.mpl_orbpre.load(fd)
+    header = _get_header(obj)
+    assert header.fixed_header.file_name == filename.stem
+
+
+@pytest.mark.parametrize("filename", MPL_ORBPRE[:1])
+def test_load_xml_mpl_orbpre(filename):
+    etree = pytest.importorskip("lxml.etree")
+    xmldoc = etree.parse(filename)
+    obj = xseof.mpl_orbpre.load(xmldoc)
     header = _get_header(obj)
     assert header.fixed_header.file_name == filename.stem
 
@@ -294,6 +348,15 @@ def test_load_fd_mpl_orbref(filename):
     assert header.fixed_header.file_name == filename.stem
 
 
+@pytest.mark.parametrize("filename", MPL_ORBREF[:1])
+def test_load_xml_mpl_orbref(filename):
+    etree = pytest.importorskip("lxml.etree")
+    xmldoc = etree.parse(filename)
+    obj = xseof.mpl_orbref.load(xmldoc)
+    header = _get_header(obj)
+    assert header.fixed_header.file_name == filename.stem
+
+
 @pytest.mark.parametrize("filename", INT_ATTREF[:1])
 def test_load_invalid_mpl_orbref(filename):
     with pytest.raises(xseof.ParserError):
@@ -316,7 +379,7 @@ def test_from_bytes_mpl_orbref(filename):
     assert header.fixed_header.file_name == filename.stem
 
 
-# === strict parameter ========================================================
+# === invalid input ===========================================================
 @pytest.mark.parametrize("module", [
     xseof,
     xseof.aux_orbdop,

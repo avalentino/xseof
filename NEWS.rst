@@ -4,7 +4,7 @@ Version history
 xseof v1.1.1 (UNRELEASED)
 -------------------------
 
-* TBW
+* Improve robustness in th edetection of EOF files.
 
 
 xseof v1.1.0 (23/12/2022)
