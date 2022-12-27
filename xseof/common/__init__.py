@@ -1,0 +1,1 @@
+"""Common XML types definition."""
