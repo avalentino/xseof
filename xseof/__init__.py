@@ -74,6 +74,7 @@ def _fix_namespaces(source):
 def _safe_fix_namespaces(source) -> bytes:
     try:
         from lxml import etree
+
         xmldoc = _fix_namespaces(source)
         fixed_source = etree.tostring(
             xmldoc, pretty_print=True, xml_declaration=True
