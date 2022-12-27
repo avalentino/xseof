@@ -23,16 +23,28 @@ from . import mpl_orbref  # noqa: F401
 
 
 __version__ = "1.1.1.dev0"
+_modules = (
+    aux_orbdop,
+    aux_orbdor,
+    aux_orbres,
+    int_attref,
+    mpl_orbpre,
+    mpl_orbref,
+)
 
 
 def _fix_namespaces(source: Union[str, bytes]) -> Union[str, bytes]:
     from lxml import etree
 
+    if isinstance(source, (str, bytes)):
+        root = etree.fromstring(source)
+    else:
+        root = source if not hasattr(source, "getroot") else source.getroot()
+
     root_tags = {"Earth_Explorer_File", "Earth_Observation_File"}
 
-    root = etree.fromstring(source)
     if root.tag not in root_tags or root.nsmap:
-        if hasattr(source, 'encode'):
+        if hasattr(source, "encode"):
             source = source.encode("utf-8")
         return source
 
@@ -49,7 +61,7 @@ def _fix_namespaces(source: Union[str, bytes]) -> Union[str, bytes]:
 
 def from_string(source: Union[str, bytes], strict: bool = False):
     """Load on EOF onject from the source string or bytes string.
-    
+
     The `strict` parameter (default: `False`) enforces stricy checking
     of XML namespaces.
     """
@@ -67,7 +79,12 @@ def from_string(source: Union[str, bytes], strict: bool = False):
             try:
                 source = _fix_namespaces(source)
                 return parser.from_bytes(source)
-            except (ImportError, SyntaxError):
+            except (ImportError, SyntaxError, ParserError):
+                pass
+        for mod in _modules:
+            try:
+                return mod.from_string(source)
+            except ParserError:
                 pass
         raise
 
@@ -89,6 +106,16 @@ def load(source, strict: bool = False):
             parser = XmlParser()
             return parser.parse(source)
         except ParserError:
-            with open(source, "rb") as fd:
-                source = fd.read()
+            def is_xmldoc(source):
+                return hasattr(source, "getroot") or hasattr(source, "tag")
+            if is_xmldoc(source):
+                try:
+                    # xml object to bytes
+                    source = _fix_namespaces(source)
+                except ImportError:
+                    pass
+                raise
+            else:
+                with open(source, "rb") as fd:
+                    source = fd.read()
             return from_string(source, strict=strict)

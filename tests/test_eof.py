@@ -33,7 +33,7 @@ def _get_header(obj):
 
 
 # === High level functions ====================================================
-@pytest.mark.parametrize("filename", AUX_ORBRES)
+@pytest.mark.parametrize("filename", AUX_ORBRES + INT_ATTREF)
 def test_load_from_filename(filename):
     obj = xseof.load(str(filename))
     header = _get_header(obj)
@@ -72,7 +72,7 @@ def test_load_from_xmldoc(filename):
     assert header.fixed_header.file_name == filename.stem
 
 
-@pytest.mark.parametrize("filename", AUX_ORBRES)
+@pytest.mark.parametrize("filename", AUX_ORBRES + INT_ATTREF)
 def test_from_string(filename):
     data = filename.read_text()
     obj = xseof.from_string(data)
@@ -387,3 +387,10 @@ def test_load_s1_orb_from_invalid_bytes():
     xml_bytes = "<dummy><dummytag>aaa</dummytag></dummy>"
     with pytest.raises(xseof.ParserError):
         xseof.from_string(xml_bytes)
+
+
+@pytest.mark.parametrize("filename", S1X_XXXORB)
+def test_load_s1_orb_from_xml(filename):
+    lxml = pytest.importorskip("lxml")
+    xmldoc = lxml.etree.parse(filename)
+    xseof.load(xmldoc)
