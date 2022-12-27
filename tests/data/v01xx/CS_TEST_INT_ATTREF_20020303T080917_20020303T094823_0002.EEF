@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<Earth_Explorer_File xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://eop-cfi.esa.int/CFI http://eop-cfi.esa.int/CFI/EE_CFI_SCHEMAS/EO_OPER_INT_ATTREF_0101.XSD"
+  xmlns="http://eop-cfi.esa.int/CFI" schemaVersion="1.1">
+  <Earth_Explorer_Header>
+    <Fixed_Header>
+      <File_Name>CS_TEST_INT_ATTREF_20020303T080917_20020303T094823_0002</File_Name>
+      <File_Description>Attitude File</File_Description>
+      <Notes>
+                 WARNING: this is an example of file compliant with formats defined and supported
+                          within the Earth Observation Mission CFI Software.
+                          This file does not reflect the actual satellite orbit
+                          attitude or instrument configuration.
+                          This file shall not be used in production environments.
+      </Notes>
+      <Mission>CryoSat</Mission>
+      <File_Class>TEST</File_Class>
+      <File_Type>INT_ATTCFG</File_Type>
+      <Validity_Period>
+        <Validity_Start>UTC=2002-03-03T08:09:17</Validity_Start>
+        <Validity_Stop>UTC=2002-03-03T09:48:23</Validity_Stop>
+      </Validity_Period>
+      <File_Version>0002</File_Version>
+      <Source>
+        <System>System Identification as per Ground Segment File Format Standard (PE-TN-ESA-GS-0001)</System>
+        <Creator>Creator Identification as per Ground Segment File Format Standard (PE-TN-ESA-GS-0001)</Creator>
+        <Creator_Version>Creator Version Identification as per Ground Segment File Format Standard (PE-TN-ESA-GS-0001)</Creator_Version>
+        <Creation_Date>UTC=2003-11-28T17:25:44</Creation_Date>
+      </Source>
+    </Fixed_Header>
+    <Variable_Header></Variable_Header>
+  </Earth_Explorer_Header>
+  <Data_Block type="xml">
+    <Attitude_File_Type>Sat_Attitude</Attitude_File_Type>
+    <Attitude_Data_Type>Attitude_Angles</Attitude_Data_Type>
+    <Max_Gap unit="s">200</Max_Gap>
+    <Attitude_Angles_Data>
+      <List_of_Attitude_Angles count="2">
+        <Attitude_Angles>
+          <Time ref="TAI">TAI=2004-07-04T18:26:30.000000</Time>
+          <Pitch unit="deg">0.05</Pitch>
+          <Roll unit="deg">0.15</Roll>
+          <Yaw unit="deg">-0.25</Yaw>
+        </Attitude_Angles>
+        <Attitude_Angles>
+          <Time ref="TAI">TAI=2004-07-04T18:26:32.000000</Time>
+          <Pitch unit="deg">0.07</Pitch>
+          <Roll unit="deg">0.17</Roll>
+          <Yaw unit="deg">-0.27</Yaw>
+        </Attitude_Angles>
+      </List_of_Attitude_Angles>
+    </Attitude_Angles_Data>
+  </Data_Block>
+</Earth_Explorer_File>
