@@ -33,6 +33,10 @@ _modules = (
 )
 
 
+def _is_xmldoc(source):
+    return hasattr(source, "getroot") or hasattr(source, "tag")
+
+
 def _fix_namespaces(source: Union[str, bytes]) -> Union[str, bytes]:
     from lxml import etree
 
@@ -44,7 +48,7 @@ def _fix_namespaces(source: Union[str, bytes]) -> Union[str, bytes]:
     root_tags = {"Earth_Explorer_File", "Earth_Observation_File"}
 
     if root.tag not in root_tags or root.nsmap:
-        if hasattr(source, "encode"):
+        if isinstance(source, str):
             source = source.encode("utf-8")
         return source
 
@@ -52,11 +56,23 @@ def _fix_namespaces(source: Union[str, bytes]) -> Union[str, bytes]:
         "xsi": "http://www.w3.org/2001/XMLSchema-instance",
         None: "http://eop-cfi.esa.int/CFI",
     }
-    root2 = etree.Element(root.tag, attrib=root.attrib, nsmap=nsmap)
-    root2[:] = root[:]
-    xml2 = etree.ElementTree(root2)
+    new_root = etree.Element(root.tag, attrib=root.attrib, nsmap=nsmap)
+    new_root[:] = root[:]
+    new_xml = etree.ElementTree(new_root)
 
-    return etree.tostring(xml2, pretty_print=True, xml_declaration=True)
+    return etree.tostring(new_xml, pretty_print=True, xml_declaration=True)
+
+
+def _safe_fix_namespaces(source: Union[str, bytes]) -> Union[str, bytes]:
+    try:
+        fixed_source = _fix_namespaces(source)
+    except (ImportError, SyntaxError):
+        fixed_source = source
+
+    if isinstance(fixed_source, str):
+        fixed_source = fixed_source.encode("utf-8")
+
+    return fixed_source
 
 
 def from_string(source: Union[str, bytes], strict: bool = False):
@@ -76,10 +92,10 @@ def from_string(source: Union[str, bytes], strict: bool = False):
         return parse(source)
     except ParserError:
         if not strict:
+            source = _safe_fix_namespaces(source)
             try:
-                source = _fix_namespaces(source)
                 return parser.from_bytes(source)
-            except (ImportError, SyntaxError, ParserError):
+            except ParserError:
                 pass
         for mod in _modules:
             try:
@@ -102,20 +118,15 @@ def load(source, strict: bool = False):
         data = source.read()
         return from_string(data, strict=strict)
     else:
+        parser = XmlParser()
         try:
-            parser = XmlParser()
             return parser.parse(source)
         except ParserError:
-            def is_xmldoc(source):
-                return hasattr(source, "getroot") or hasattr(source, "tag")
-            if is_xmldoc(source):
-                try:
-                    # xml object to bytes
-                    source = _fix_namespaces(source)
-                except ImportError:
-                    pass
-                raise
+            if _is_xmldoc(source):
+                # xml object to bytes
+                source = _safe_fix_namespaces(source)
             else:
+                # assume it is a file path
                 with open(source, "rb") as fd:
                     source = fd.read()
             return from_string(source, strict=strict)
