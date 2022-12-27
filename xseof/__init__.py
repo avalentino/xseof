@@ -43,7 +43,7 @@ def _fix_namespaces(source):
     from lxml import etree
 
     if isinstance(source, str):
-        xmldoc = etree.parse(io.StringIO(source))
+        xmldoc = etree.parse(io.BytesIO(source.encode("utf-8")))
     elif isinstance(source, bytes):
         xmldoc = etree.parse(io.BytesIO(source))
     elif _is_xmldoc(source):
