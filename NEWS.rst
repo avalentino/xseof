@@ -1,7 +1,7 @@
 Version history
 ===============
 
-xseof v1.1.1 (UNRELEASED)
+xseof v1.1.1 (27/12/2022)
 -------------------------
 
 * Improve robustness in EOF files detection.
