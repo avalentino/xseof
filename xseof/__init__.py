@@ -16,12 +16,12 @@ from typing import Union
 from xsdata.exceptions import ParserError
 from xsdata.formats.dataclass.parsers import XmlParser
 
-from . import aux_orbdop  # noqa: F401
-from . import aux_orbdor  # noqa: F401
-from . import aux_orbres  # noqa: F401
-from . import int_attref  # noqa: F401
-from . import mpl_orbpre  # noqa: F401
-from . import mpl_orbref  # noqa: F401
+from . import aux_orbdop
+from . import aux_orbdor
+from . import aux_orbres
+from . import int_attref
+from . import mpl_orbpre
+from . import mpl_orbref
 
 
 __version__ = "1.1.1.dev0"
@@ -100,7 +100,7 @@ def from_string(source: Union[str, bytes], strict: bool = False):
     elif isinstance(source, bytes):
         parse = parser.from_bytes
     else:
-        raise TypeError(
+        raise ValueError(
             f"invalid 'source' type ({type(source)!r}), str or bytes expected"
         )
 

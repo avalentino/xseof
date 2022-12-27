@@ -57,8 +57,12 @@ def from_string(source: Union[str, bytes]):
 
     if isinstance(source, str):
         parse = parser.from_string
-    else:
+    elif isinstance(source, bytes):
         parse = parser.from_bytes
+    else:
+        raise ValueError(
+            f"invalid 'source' type ({type(source)!r}), str or bytes expected"
+        )
 
     for clazz in _type_classes:
         try:

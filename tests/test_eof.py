@@ -395,6 +395,37 @@ def test_from_invalid_string(module):
         module.from_string(data)
 
 
+@pytest.mark.parametrize("module", [
+    xseof,
+    xseof.aux_orbdop,
+    xseof.aux_orbdor,
+    xseof.aux_orbres,
+    xseof.int_attref,
+    xseof.mpl_orbpre,
+    xseof.mpl_orbref,
+])
+def test_from_invalid_string_type(module):
+    data = 13
+    with pytest.raises(ValueError):
+        module.from_string(data)
+
+
+@pytest.mark.parametrize("module", [
+    xseof,
+    xseof.aux_orbdop,
+    xseof.aux_orbdor,
+    xseof.aux_orbres,
+    xseof.int_attref,
+    xseof.mpl_orbpre,
+    xseof.mpl_orbref,
+])
+def test_from_invalid_xmldoc(module):
+    etree = pytest.importorskip("lxml.etree")
+    xmldoc = etree.fromstring("<dummy><a>empty</a></dummy>")
+    with pytest.raises(xseof.ParserError):
+        module.load(xmldoc)
+
+
 # === no-strict parsing =======================================================
 @pytest.mark.parametrize("filename", S1X_XXXORB)
 def test_load_s1_orb(filename):
@@ -457,3 +488,11 @@ def test_load_s1_orb_from_xml(filename):
     lxml = pytest.importorskip("lxml")
     xmldoc = lxml.etree.parse(filename)
     xseof.load(xmldoc)
+
+
+@pytest.mark.parametrize("filename", S1X_XXXORB)
+def test_load_s1_orb_from_xml_strict(filename):
+    lxml = pytest.importorskip("lxml")
+    xmldoc = lxml.etree.parse(filename)
+    with pytest.raises(xseof.ParserError):
+        xseof.load(xmldoc, strict=True)
