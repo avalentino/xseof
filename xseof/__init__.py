@@ -24,7 +24,7 @@ from . import mpl_orbpre
 from . import mpl_orbref
 
 
-__version__ = "1.1.1"
+__version__ = "1.1.2.dev0"
 _modules = (
     aux_orbdop,
     aux_orbdor,
