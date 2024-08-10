@@ -118,7 +118,7 @@ Load data form string::
 License
 -------
 
-Copyright 2022-2023 Antonio Valentino
+Copyright 2022-2024 Antonio Valentino
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -137,4 +137,3 @@ See the License for the specific langua
 .. _conda: https://docs.conda.io
 
 .. [1] https://eop-cfi.esa.int/Repo/PUBLIC/DOCUMENTATION/SYSTEM_SUPPORT_DOCS/PE-TN-ESA-GS-0001%20EO%20GS%20File%20Format%20Standard%203.0%20signed.pdf
-
