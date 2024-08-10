@@ -1,3 +1,68 @@
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools>=61.0.0"]
 build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "xseof"
+authors = [
+    {name = "Antonio Valentino", email = "antonio.valentino@tiscali.it"},
+]
+description = "I/O library for the ESA EOF files"
+# readme = "README.rst"
+requires-python = ">=3.8"
+keywords = ["orbit", "attitude", "dataclasses", "eof", "esa"]
+license = {text = "Apache-2.0"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "xsdata",
+]
+dynamic = ["version", "readme"]
+
+
+[project.optional-dependencies]
+podhub = ["lxml"]
+full = ["xseof[podhub]"]
+
+
+[project.urls]
+Homepage = "https://github.com/avalentino/xseof"
+Documentation = "https://github.com/avalentino/xseof/blob/main/README.rst"
+Repository = "https://github.com/avalentino/xseof.git"
+Download = "https://pypi.org/project/xseof"
+Changelog = "https://github.com/avalentino/xseof/blob/main/NEWS.rst"
+Issues = "https://github.com/avalentino/xseof/issues"
+
+
+[tool.setuptools]
+packages = [
+    "xseof",
+    "xseof.aux_orbdop",
+    "xseof.aux_orbdor",
+    "xseof.aux_orbres",
+    "xseof.common",
+    "xseof.int_attref",
+    "xseof.mpl_orbpre",
+    "xseof.mpl_orbref",
+]
+# zip-safe = true
+# license-files = ["LICENSE"]
+
+
+[tool.setuptools.dynamic]
+version = {attr = "xseof.__version__"}
+readme = {file = ["README.rst", "NEWS.rst"]}
+
+
+[tool.pytest.ini_options]
+addopts = "--ignore=examples/"
