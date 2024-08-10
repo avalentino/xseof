@@ -4,7 +4,8 @@ Version history
 xseof v1.1.2 (UNRELEASED)
 -------------------------
 
-* TBW
+* Re-generate the source code with xsdata v24.4.
+* Move package metadata to `pyproject.toml`.
 
 
 xseof v1.1.1 (27/12/2022)
