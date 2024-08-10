@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Config xmlns="http://pypi.org/project/xsdata" version="22.11">
-  <Output maxLineLength="79">
+<Config xmlns="http://pypi.org/project/xsdata" version="24.7">
+  <Output maxLineLength="79" subscriptableTypes="false" unionType="false">
     <Package>xseof</Package>
     <Format repr="true" eq="true" order="false" unsafeHash="false" frozen="false" slots="false" kwOnly="false">dataclasses</Format>
     <Structure>clusters</Structure>
     <DocstringStyle>reStructuredText</DocstringStyle>
-    <FilterStrategy>allGlobals</FilterStrategy>
     <RelativeImports>true</RelativeImports>
-    <CompoundFields defaultName="choice" forceDefaultName="false">false</CompoundFields>
+    <CompoundFields defaultName="choice" useSubstitutionGroups="false" forceDefaultName="false" maxNameParts="3">false</CompoundFields>
+    <WrapperFields>false</WrapperFields>
     <PostponedAnnotations>false</PostponedAnnotations>
     <UnnestClasses>false</UnnestClasses>
+    <IgnorePatterns>false</IgnorePatterns>
+    <IncludeHeader>false</IncludeHeader>
   </Output>
   <Conventions>
     <ClassName case="pascalCase" safePrefix="type"/>
@@ -28,6 +30,7 @@
     <Substitution type="package" search="http://schemas.xmlsoap.org/wsdl/soap/" replace="soap"/>
     <Substitution type="package" search="http://schemas.xmlsoap.org/wsdl/soap12/" replace="soap12"/>
     <Substitution type="package" search="http://schemas.xmlsoap.org/soap/envelope/" replace="soapenv"/>
-    <Substitution type="class" search="Class" replace="Type"/>
+    <Substitution type="class" search="(.*)Class$" replace="\1Type"/>
   </Substitutions>
+  <Extensions/>
 </Config>
