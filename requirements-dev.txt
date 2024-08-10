@@ -1,0 +1,6 @@
+build
+twine
+pytest
+pytest-cov
+tox
+flake8
