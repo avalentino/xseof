@@ -43,7 +43,8 @@ from .eo_oper_int_attref_0301 import (  # noqa: F401
 _type_name = "IntAttRefFile"
 _type_description = __doc__.rstrip(".")
 _type_classes = tuple(
-    clazz for name, clazz in sorted(globals().items(), reverse=True)
+    clazz
+    for name, clazz in sorted(globals().items(), reverse=True)
     if name.startswith(_type_name)
 )
 
