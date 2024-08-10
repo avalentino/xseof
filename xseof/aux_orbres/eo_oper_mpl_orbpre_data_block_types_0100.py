@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from ..common.orbit_types_0100 import ListOfOsvsType
 
 __NAMESPACE__ = "http://eop-cfi.esa.int/CFI"
@@ -17,13 +18,14 @@ class PredictedOrbitDataBlockType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
-    type: str = field(
+    type_value: str = field(
         init=False,
         default="xml",
         metadata={
+            "name": "type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

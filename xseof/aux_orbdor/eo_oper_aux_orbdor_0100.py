@@ -1,8 +1,11 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
+
 from ..common.basic_types_0100 import AnyTypeType
-from .eo_oper_mpl_orbpre_data_block_types_0100 import PredictedOrbitDataBlockType
+from .eo_oper_mpl_orbpre_data_block_types_0100 import (
+    PredictedOrbitDataBlockType,
+)
 from ..common.header_types_0100 import FixedHeaderType
 
 __NAMESPACE__ = "http://eop-cfi.esa.int/CFI"
@@ -20,7 +23,7 @@ class DorisPreciseHeaderType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     variable_header: Optional[AnyTypeType] = field(
         default=None,
@@ -29,7 +32,7 @@ class DorisPreciseHeaderType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
 
 
@@ -45,7 +48,7 @@ class DorisPreciseFileType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     data_block: Optional[PredictedOrbitDataBlockType] = field(
         default=None,
@@ -54,7 +57,7 @@ class DorisPreciseFileType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     schema_version: Optional[Decimal] = field(
         default=None,
@@ -62,7 +65,7 @@ class DorisPreciseFileType:
             "name": "schemaVersion",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 

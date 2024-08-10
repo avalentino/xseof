@@ -2,6 +2,7 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from enum import Enum
 from typing import Optional
+
 from .basic_types_0101 import AnyTypeType
 
 __NAMESPACE__ = "http://eop-cfi.esa.int/CFI"
@@ -16,7 +17,7 @@ class DeltaUt1Type:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     unit: str = field(
         init=False,
@@ -24,7 +25,7 @@ class DeltaUt1Type:
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -37,14 +38,14 @@ class EquatorCrossLongType:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     unit: str = field(
         init=False,
         default="10-6deg",
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -57,7 +58,7 @@ class LatType:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     unit: str = field(
         init=False,
@@ -65,7 +66,7 @@ class LatType:
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -78,7 +79,7 @@ class LongType:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     unit: str = field(
         init=False,
@@ -86,7 +87,7 @@ class LongType:
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -112,7 +113,7 @@ class PositionType:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     unit: str = field(
         init=False,
@@ -120,7 +121,7 @@ class PositionType:
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -136,7 +137,7 @@ class ProductConfidenceDataType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     num_missing_isps: Optional[int] = field(
         default=None,
@@ -145,7 +146,7 @@ class ProductConfidenceDataType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     num_error_isps: Optional[int] = field(
         default=None,
@@ -154,7 +155,7 @@ class ProductConfidenceDataType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     num_discarded_isps: Optional[int] = field(
         default=None,
@@ -163,7 +164,7 @@ class ProductConfidenceDataType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     num_rs_isps: Optional[int] = field(
         default=None,
@@ -172,7 +173,7 @@ class ProductConfidenceDataType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     num_rs_corrections: Optional[int] = field(
         default=None,
@@ -181,7 +182,7 @@ class ProductConfidenceDataType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
 
 
@@ -194,7 +195,7 @@ class RelTimeAscNodeType:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     unit: str = field(
         init=False,
@@ -202,7 +203,7 @@ class RelTimeAscNodeType:
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -218,7 +219,7 @@ class SourceType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     creator: Optional[str] = field(
         default=None,
@@ -227,7 +228,7 @@ class SourceType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     creator_version: Optional[str] = field(
         default=None,
@@ -236,7 +237,7 @@ class SourceType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     creation_date: Optional[str] = field(
         default=None,
@@ -247,7 +248,7 @@ class SourceType:
             "required": True,
             "length": 23,
             "pattern": r"UTC=.*",
-        }
+        },
     )
 
 
@@ -260,7 +261,7 @@ class TotSizeType:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     unit: str = field(
         init=False,
@@ -268,7 +269,7 @@ class TotSizeType:
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -285,7 +286,7 @@ class ValidityPeriodBomEomType:
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
             "pattern": r"UTC=0000-00-00T00:00:00",
-        }
+        },
     )
     validity_stop: Optional[str] = field(
         default=None,
@@ -295,7 +296,7 @@ class ValidityPeriodBomEomType:
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
             "pattern": r"UTC=9999-99-99T99:99:99",
-        }
+        },
     )
 
 
@@ -313,7 +314,7 @@ class ValidityPeriodEomType:
             "required": True,
             "length": 23,
             "pattern": r"UTC=.*",
-        }
+        },
     )
     validity_stop: Optional[str] = field(
         default=None,
@@ -323,7 +324,7 @@ class ValidityPeriodEomType:
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
             "pattern": r"UTC=9999-99-99T99:99:99",
-        }
+        },
     )
 
 
@@ -341,7 +342,7 @@ class ValidityPeriodType:
             "required": True,
             "length": 23,
             "pattern": r"UTC=.*",
-        }
+        },
     )
     validity_stop: Optional[str] = field(
         default=None,
@@ -352,7 +353,7 @@ class ValidityPeriodType:
             "required": True,
             "length": 23,
             "pattern": r"UTC=.*",
-        }
+        },
     )
 
 
@@ -365,7 +366,7 @@ class VelocityType:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     unit: str = field(
         init=False,
@@ -373,7 +374,7 @@ class VelocityType:
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -389,7 +390,7 @@ class FixedHeaderBomEomType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     file_description: Optional[str] = field(
         default=None,
@@ -398,7 +399,7 @@ class FixedHeaderBomEomType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     notes: Optional[str] = field(
         default=None,
@@ -407,7 +408,7 @@ class FixedHeaderBomEomType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     mission: Optional[str] = field(
         default=None,
@@ -416,7 +417,7 @@ class FixedHeaderBomEomType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     file_class: Optional[str] = field(
         default=None,
@@ -426,7 +427,7 @@ class FixedHeaderBomEomType:
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
             "pattern": r"OPER|OFFL|NRT_|RPRO|STV[0-3]|GSOV|TEST|TD[0-9][0-9]|Routine Operations|Off-Line Processing|near-real-Time Processing|Re-Processing|Satellite Validation Test [0-3]|Ground Segment Overall Validation test|Generated test files|Test Data Set [0-9][0-9]",
-        }
+        },
     )
     file_type: Optional[str] = field(
         default=None,
@@ -436,7 +437,7 @@ class FixedHeaderBomEomType:
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
             "pattern": r"[A-Z0-9_]{10}",
-        }
+        },
     )
     validity_period: Optional[ValidityPeriodBomEomType] = field(
         default=None,
@@ -445,7 +446,7 @@ class FixedHeaderBomEomType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     file_version: Optional[int] = field(
         default=None,
@@ -454,7 +455,7 @@ class FixedHeaderBomEomType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     source: Optional[SourceType] = field(
         default=None,
@@ -463,7 +464,7 @@ class FixedHeaderBomEomType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
 
 
@@ -479,7 +480,7 @@ class FixedHeaderEomType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     file_description: Optional[str] = field(
         default=None,
@@ -488,7 +489,7 @@ class FixedHeaderEomType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     notes: Optional[str] = field(
         default=None,
@@ -497,7 +498,7 @@ class FixedHeaderEomType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     mission: Optional[str] = field(
         default=None,
@@ -506,7 +507,7 @@ class FixedHeaderEomType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     file_class: Optional[str] = field(
         default=None,
@@ -516,7 +517,7 @@ class FixedHeaderEomType:
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
             "pattern": r"OPER|OFFL|NRT_|RPRO|STV[0-3]|GSOV|TEST|TD[0-9][0-9]|Routine Operations|Off-Line Processing|near-real-Time Processing|Re-Processing|Satellite Validation Test [0-3]|Ground Segment Overall Validation test|Generated test files|Test Data Set [0-9][0-9]",
-        }
+        },
     )
     file_type: Optional[str] = field(
         default=None,
@@ -526,7 +527,7 @@ class FixedHeaderEomType:
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
             "pattern": r"[A-Z0-9_]{10}",
-        }
+        },
     )
     validity_period: Optional[ValidityPeriodEomType] = field(
         default=None,
@@ -535,7 +536,7 @@ class FixedHeaderEomType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     file_version: Optional[int] = field(
         default=None,
@@ -544,7 +545,7 @@ class FixedHeaderEomType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     source: Optional[SourceType] = field(
         default=None,
@@ -553,7 +554,7 @@ class FixedHeaderEomType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
 
 
@@ -570,7 +571,7 @@ class FixedHeaderType:
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
             "pattern": r"([A-Z_]){2}_([A-Z0-9_]){4}_([A-Z0-9_]){10}_([A-Z0-9_]){1,41}",
-        }
+        },
     )
     file_description: Optional[str] = field(
         default=None,
@@ -579,7 +580,7 @@ class FixedHeaderType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     notes: Optional[str] = field(
         default=None,
@@ -588,7 +589,7 @@ class FixedHeaderType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     mission: Optional[str] = field(
         default=None,
@@ -597,7 +598,7 @@ class FixedHeaderType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     file_class: Optional[str] = field(
         default=None,
@@ -607,7 +608,7 @@ class FixedHeaderType:
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
             "pattern": r"OPER|OFFL|NRT_|RPRO|STV[0-3]|GSOV|TEST|TD[0-9][0-9]|Routine Operations|Off-Line Processing|near-real-Time Processing|Re-Processing|Satellite Validation Test [0-3]|Ground Segment Overall Validation test|Generated test files|Test Data Set [0-9][0-9]",
-        }
+        },
     )
     file_type: Optional[str] = field(
         default=None,
@@ -617,7 +618,7 @@ class FixedHeaderType:
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
             "pattern": r"[A-Z0-9_]{10}",
-        }
+        },
     )
     validity_period: Optional[ValidityPeriodType] = field(
         default=None,
@@ -626,7 +627,7 @@ class FixedHeaderType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     file_version: Optional[str] = field(
         default=None,
@@ -636,7 +637,7 @@ class FixedHeaderType:
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
             "pattern": r"[0-9]{4}",
-        }
+        },
     )
     source: Optional[SourceType] = field(
         default=None,
@@ -645,7 +646,7 @@ class FixedHeaderType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
 
 
@@ -661,7 +662,7 @@ class MphType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     proc_stage_code: Optional[str] = field(
         default=None,
@@ -670,7 +671,7 @@ class MphType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     ref_doc: Optional[str] = field(
         default=None,
@@ -679,7 +680,7 @@ class MphType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     proc_time: Optional[str] = field(
         default=None,
@@ -688,7 +689,7 @@ class MphType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     software_version: Optional[str] = field(
         default=None,
@@ -697,7 +698,7 @@ class MphType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     phase: Optional[str] = field(
         default=None,
@@ -706,7 +707,7 @@ class MphType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     cycle: Optional[int] = field(
         default=None,
@@ -715,7 +716,7 @@ class MphType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     rel_orbit: Optional[int] = field(
         default=None,
@@ -724,7 +725,7 @@ class MphType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     abs_orbit: Optional[int] = field(
         default=None,
@@ -733,7 +734,7 @@ class MphType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     state_vector_time: Optional[str] = field(
         default=None,
@@ -743,7 +744,7 @@ class MphType:
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
             "pattern": r"UTC=.*",
-        }
+        },
     )
     delta_ut1: Optional[DeltaUt1Type] = field(
         default=None,
@@ -752,7 +753,7 @@ class MphType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     x_position: Optional[PositionType] = field(
         default=None,
@@ -761,7 +762,7 @@ class MphType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     y_position: Optional[PositionType] = field(
         default=None,
@@ -770,7 +771,7 @@ class MphType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     z_position: Optional[PositionType] = field(
         default=None,
@@ -779,7 +780,7 @@ class MphType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     x_velocity: Optional[VelocityType] = field(
         default=None,
@@ -788,7 +789,7 @@ class MphType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     y_velocity: Optional[VelocityType] = field(
         default=None,
@@ -797,7 +798,7 @@ class MphType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     z_velocity: Optional[VelocityType] = field(
         default=None,
@@ -806,7 +807,7 @@ class MphType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     state_vector_source: Optional[str] = field(
         default=None,
@@ -816,7 +817,7 @@ class MphType:
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
             "pattern": r"..",
-        }
+        },
     )
     product_err: Optional[int] = field(
         default=None,
@@ -825,7 +826,7 @@ class MphType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     tot_size: Optional[TotSizeType] = field(
         default=None,
@@ -834,7 +835,7 @@ class MphType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
 
 
@@ -850,7 +851,7 @@ class OrbitFileVariableHeader:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
 
 
@@ -867,7 +868,7 @@ class OrbitInformationType:
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
             "pattern": r"TAI=.*",
-        }
+        },
     )
     abs_orbit_start: Optional[int] = field(
         default=None,
@@ -876,7 +877,7 @@ class OrbitInformationType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     rel_time_asc_node_start: Optional[RelTimeAscNodeType] = field(
         default=None,
@@ -885,7 +886,7 @@ class OrbitInformationType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     sensing_stop: Optional[str] = field(
         default=None,
@@ -895,7 +896,7 @@ class OrbitInformationType:
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
             "pattern": r"TAI=.*",
-        }
+        },
     )
     abs_orbit_stop: Optional[int] = field(
         default=None,
@@ -904,7 +905,7 @@ class OrbitInformationType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     rel_time_asc_node_stop: Optional[RelTimeAscNodeType] = field(
         default=None,
@@ -913,7 +914,7 @@ class OrbitInformationType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     equator_cross_time: Optional[str] = field(
         default=None,
@@ -922,7 +923,7 @@ class OrbitInformationType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     equator_cross_long: Optional[EquatorCrossLongType] = field(
         default=None,
@@ -931,7 +932,7 @@ class OrbitInformationType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     ascending_flag: Optional[str] = field(
         default=None,
@@ -941,7 +942,7 @@ class OrbitInformationType:
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
             "length": 1,
-        }
+        },
     )
 
 
@@ -957,7 +958,7 @@ class ProductLocationType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     start_long: Optional[LongType] = field(
         default=None,
@@ -966,7 +967,7 @@ class ProductLocationType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     stop_lat: Optional[LatType] = field(
         default=None,
@@ -975,7 +976,7 @@ class ProductLocationType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     stop_long: Optional[LongType] = field(
         default=None,
@@ -984,7 +985,7 @@ class ProductLocationType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
 
 
@@ -1000,7 +1001,7 @@ class EarthExplorerHeaderType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     variable_header: Optional[AnyTypeType] = field(
         default=None,
@@ -1009,7 +1010,7 @@ class EarthExplorerHeaderType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
 
 
@@ -1025,7 +1026,7 @@ class SphType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     orbit_information: Optional[OrbitInformationType] = field(
         default=None,
@@ -1034,7 +1035,7 @@ class SphType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     product_location: Optional[ProductLocationType] = field(
         default=None,
@@ -1043,7 +1044,7 @@ class SphType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     product_confidence_data: Optional[ProductConfidenceDataType] = field(
         default=None,
@@ -1052,5 +1053,5 @@ class SphType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )

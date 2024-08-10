@@ -1,8 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from ..common.orbit_types_0100 import (
-    ListOfOsvsType,
     ListOfOrbitChangesType,
+    ListOfOsvsType,
 )
 
 __NAMESPACE__ = "http://eop-cfi.esa.int/CFI"
@@ -20,7 +21,7 @@ class OrbitReferenceDataBlockType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     list_of_osvs: Optional[ListOfOsvsType] = field(
         default=None,
@@ -28,13 +29,14 @@ class OrbitReferenceDataBlockType:
             "name": "List_of_OSVs",
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
-        }
+        },
     )
-    type: str = field(
+    type_value: str = field(
         init=False,
         default="xml",
         metadata={
+            "name": "type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

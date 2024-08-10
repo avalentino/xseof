@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
+
 from ..common.basic_types_0101 import AngleType
 from ..common.time_types_0102 import TimeReferenceType
 
@@ -16,7 +17,7 @@ class MaxGapType:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     unit: str = field(
         init=False,
@@ -24,7 +25,20 @@ class MaxGapType:
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
+    )
+
+
+@dataclass
+class QuaternionComponentType:
+    class Meta:
+        name = "Quaternion_Component_Type"
+
+    value: Optional[Decimal] = field(
+        default=None,
+        metadata={
+            "required": True,
+        },
     )
 
 
@@ -38,14 +52,14 @@ class AngleTimeType:
         metadata={
             "required": True,
             "pattern": r"[A-Z0-9]{3}=(\d{4}-(((01|03|05|07|08|10|12)-(0[1-9]|[1,2][0-9]|3[0,1]))|((04|06|09|11)-(0[1-9]|[1,2][0-9]|30))|(02-(0[1-9]|[1,2][0-9])))T([0,1][0-9]|2[0-3])(:[0-5][0-9]){2}|0000-00-00T00:00:00|9999-99-99T99:99:99)(.\d*)?",
-        }
+        },
     )
     ref: Optional[TimeReferenceType] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -61,7 +75,7 @@ class AnglesDataType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     pitch: Optional[AngleType] = field(
         default=None,
@@ -70,7 +84,7 @@ class AnglesDataType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     roll: Optional[AngleType] = field(
         default=None,
@@ -79,7 +93,7 @@ class AnglesDataType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     yaw: Optional[AngleType] = field(
         default=None,
@@ -88,7 +102,7 @@ class AnglesDataType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
 
 
@@ -104,43 +118,43 @@ class QuaternionType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
-    q1: Optional[Decimal] = field(
+    q1: Optional[QuaternionComponentType] = field(
         default=None,
         metadata={
             "name": "Q1",
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
-    q2: Optional[Decimal] = field(
+    q2: Optional[QuaternionComponentType] = field(
         default=None,
         metadata={
             "name": "Q2",
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
-    q3: Optional[Decimal] = field(
+    q3: Optional[QuaternionComponentType] = field(
         default=None,
         metadata={
             "name": "Q3",
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
-    q4: Optional[Decimal] = field(
+    q4: Optional[QuaternionComponentType] = field(
         default=None,
         metadata={
             "name": "Q4",
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
 
 
@@ -156,14 +170,14 @@ class ListOfAttitudeAnglesType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "min_occurs": 1,
-        }
+        },
     )
     count: Optional[int] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -179,14 +193,14 @@ class ListOfQuaternionsType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "min_occurs": 1,
-        }
+        },
     )
     count: Optional[int] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -202,7 +216,7 @@ class AttitudeAnglesDataType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     list_of_attitude_angles: Optional[ListOfAttitudeAnglesType] = field(
         default=None,
@@ -211,7 +225,7 @@ class AttitudeAnglesDataType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
 
 
@@ -227,7 +241,7 @@ class QuaternionDataType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     list_of_quaternions: Optional[ListOfQuaternionsType] = field(
         default=None,
@@ -236,7 +250,7 @@ class QuaternionDataType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
 
 
@@ -252,7 +266,7 @@ class AttitudeDataBlockType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     attitude_data_type: Optional[str] = field(
         default=None,
@@ -261,7 +275,7 @@ class AttitudeDataBlockType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     max_gap: Optional[MaxGapType] = field(
         default=None,
@@ -270,7 +284,7 @@ class AttitudeDataBlockType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     attitude_angles_data: Optional[AttitudeAnglesDataType] = field(
         default=None,
@@ -278,7 +292,7 @@ class AttitudeDataBlockType:
             "name": "Attitude_Angles_Data",
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
-        }
+        },
     )
     quaternion_data: Optional[QuaternionDataType] = field(
         default=None,
@@ -286,22 +300,23 @@ class AttitudeDataBlockType:
             "name": "Quaternion_Data",
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
-        }
+        },
     )
-    type: str = field(
+    type_value: str = field(
         init=False,
         default="xml",
         metadata={
+            "name": "type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     schema_version: Optional[Decimal] = field(
         default=None,
         metadata={
             "name": "schemaVersion",
             "type": "Attribute",
-        }
+        },
     )
 
 

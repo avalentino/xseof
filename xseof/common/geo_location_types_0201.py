@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .basic_types_0201 import (
     AngleType,
     HeightType,
@@ -44,7 +45,7 @@ class MispointingAnglesType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     roll: Optional[AngleType] = field(
         default=None,
@@ -53,7 +54,7 @@ class MispointingAnglesType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     yaw: Optional[AngleType] = field(
         default=None,
@@ -62,7 +63,7 @@ class MispointingAnglesType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
 
 
@@ -78,7 +79,7 @@ class GeoLocation2DType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     lat: Optional[LatitudeType] = field(
         default=None,
@@ -87,7 +88,7 @@ class GeoLocation2DType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
 
 
@@ -103,7 +104,7 @@ class PointingDirectionType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     el: Optional[ElevationType] = field(
         default=None,
@@ -112,7 +113,7 @@ class PointingDirectionType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
 
 
@@ -128,7 +129,7 @@ class GeoLocationType(GeoLocation2DType):
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
 
 
@@ -143,12 +144,12 @@ class PolygonTypeType:
             "name": "Polygon_Pt",
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
-        }
+        },
     )
     count: Optional[int] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

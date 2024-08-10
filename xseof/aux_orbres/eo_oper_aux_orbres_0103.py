@@ -1,7 +1,10 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from .eo_oper_aux_orbres_data_block_types_0101 import RestitutedOrbitDataBlockType
+
+from .eo_oper_aux_orbres_data_block_types_0101 import (
+    RestitutedOrbitDataBlockType,
+)
 from .eo_oper_aux_orbres_header_types_0102 import RestitutedOrbitHeaderType
 
 __NAMESPACE__ = "http://eop-cfi.esa.int/CFI"
@@ -19,7 +22,7 @@ class RestitutedOrbitFileType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     data_block: Optional[RestitutedOrbitDataBlockType] = field(
         default=None,
@@ -28,7 +31,7 @@ class RestitutedOrbitFileType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     schema_version: Optional[Decimal] = field(
         default=None,
@@ -36,7 +39,7 @@ class RestitutedOrbitFileType:
             "name": "schemaVersion",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 

@@ -1,7 +1,10 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from .eo_oper_mpl_orbpre_data_block_types_0200 import PredictedOrbitDataBlockType
+
+from .eo_oper_mpl_orbpre_data_block_types_0200 import (
+    PredictedOrbitDataBlockType,
+)
 from .eo_oper_mpl_orbpre_header_types_0200 import PredictedOrbitHeaderType
 
 __NAMESPACE__ = "http://eop-cfi.esa.int/CFI"
@@ -19,7 +22,7 @@ class PredictedOrbitFileType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     data_block: Optional[PredictedOrbitDataBlockType] = field(
         default=None,
@@ -28,7 +31,7 @@ class PredictedOrbitFileType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     schema_version: Optional[Decimal] = field(
         default=None,
@@ -36,7 +39,7 @@ class PredictedOrbitFileType:
             "name": "schemaVersion",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 

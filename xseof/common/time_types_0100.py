@@ -14,7 +14,7 @@ class SecondsTimeType:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     unit: str = field(
         init=False,
@@ -22,7 +22,7 @@ class SecondsTimeType:
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 

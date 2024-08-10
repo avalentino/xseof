@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
+
 from ..common.orbit_types_0104 import ListOfOsvsType
 
 __NAMESPACE__ = "http://eop-cfi.esa.int/CFI"
@@ -18,22 +19,23 @@ class DorisPreciseDataBlockType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
-    type: str = field(
+    type_value: str = field(
         init=False,
         default="xml",
         metadata={
+            "name": "type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     schema_version: Optional[Decimal] = field(
         default=None,
         metadata={
             "name": "schemaVersion",
             "type": "Attribute",
-        }
+        },
     )
 
 

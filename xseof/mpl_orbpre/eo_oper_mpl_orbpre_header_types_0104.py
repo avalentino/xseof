@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
+
 from ..common.header_types_0104 import (
     FixedHeaderType,
     OrbitFileVariableHeader,
@@ -21,7 +22,7 @@ class PredictedOrbitHeaderType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     variable_header: Optional[OrbitFileVariableHeader] = field(
         default=None,
@@ -30,14 +31,14 @@ class PredictedOrbitHeaderType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     schema_version: Optional[Decimal] = field(
         default=None,
         metadata={
             "name": "schemaVersion",
             "type": "Attribute",
-        }
+        },
     )
 
 

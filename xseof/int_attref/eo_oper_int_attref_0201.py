@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
+
 from .eo_oper_int_attref_data_block_types_0200 import AttitudeDataBlockType
 from .eo_oper_int_attref_header_types_0201 import AttitudeHeaderType
 
@@ -19,7 +20,7 @@ class AttitudeFileType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     data_block: Optional[AttitudeDataBlockType] = field(
         default=None,
@@ -28,7 +29,7 @@ class AttitudeFileType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     schema_version: Optional[Decimal] = field(
         default=None,
@@ -36,7 +37,7 @@ class AttitudeFileType:
             "name": "schemaVersion",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 

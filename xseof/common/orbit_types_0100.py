@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
+
 from xsdata.models.datatype import XmlTime
+
 from .geo_location_types_0100 import LongitudeType
 
 __NAMESPACE__ = "http://eop-cfi.esa.int/CFI"
@@ -16,7 +18,7 @@ class CycleLengthType:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     unit: str = field(
         init=False,
@@ -24,7 +26,7 @@ class CycleLengthType:
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -37,7 +39,7 @@ class MlstDriftType:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     unit: str = field(
         init=False,
@@ -45,7 +47,7 @@ class MlstDriftType:
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -61,7 +63,7 @@ class OrbitType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     relative_orbit: Optional[int] = field(
         default=None,
@@ -70,7 +72,7 @@ class OrbitType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     cycle_number: Optional[int] = field(
         default=None,
@@ -79,7 +81,7 @@ class OrbitType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     phase_number: Optional[int] = field(
         default=None,
@@ -88,7 +90,7 @@ class OrbitType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
 
 
@@ -101,7 +103,7 @@ class PositionComponentType:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     unit: str = field(
         init=False,
@@ -109,7 +111,7 @@ class PositionComponentType:
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -122,7 +124,7 @@ class RepeatCycleType:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     unit: str = field(
         init=False,
@@ -130,7 +132,7 @@ class RepeatCycleType:
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -147,7 +149,7 @@ class TimeOfAnxType:
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
             "pattern": r"TAI=.*",
-        }
+        },
     )
     utc: Optional[str] = field(
         default=None,
@@ -157,7 +159,7 @@ class TimeOfAnxType:
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
             "pattern": r"UTC=.*",
-        }
+        },
     )
     ut1: Optional[str] = field(
         default=None,
@@ -167,7 +169,7 @@ class TimeOfAnxType:
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
             "pattern": r"UT1=.*",
-        }
+        },
     )
 
 
@@ -180,7 +182,7 @@ class VelocityComponentType:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     unit: str = field(
         init=False,
@@ -188,7 +190,7 @@ class VelocityComponentType:
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -204,7 +206,7 @@ class CycleType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     cycle_length: Optional[CycleLengthType] = field(
         default=None,
@@ -213,7 +215,7 @@ class CycleType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     anx_longitude: Optional[LongitudeType] = field(
         default=None,
@@ -222,7 +224,7 @@ class CycleType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     mlst: Optional[XmlTime] = field(
         default=None,
@@ -231,7 +233,7 @@ class CycleType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     mlst_drift: Optional[MlstDriftType] = field(
         default=None,
@@ -240,7 +242,7 @@ class CycleType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
 
 
@@ -257,7 +259,7 @@ class OsvType:
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
             "pattern": r"TAI=.*",
-        }
+        },
     )
     utc: Optional[str] = field(
         default=None,
@@ -267,7 +269,7 @@ class OsvType:
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
             "pattern": r"UTC=.*",
-        }
+        },
     )
     ut1: Optional[str] = field(
         default=None,
@@ -277,7 +279,7 @@ class OsvType:
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
             "pattern": r"UT1=.*",
-        }
+        },
     )
     absolute_orbit: Optional[int] = field(
         default=None,
@@ -286,7 +288,7 @@ class OsvType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     x: Optional[PositionComponentType] = field(
         default=None,
@@ -295,7 +297,7 @@ class OsvType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     y: Optional[PositionComponentType] = field(
         default=None,
@@ -304,7 +306,7 @@ class OsvType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     z: Optional[PositionComponentType] = field(
         default=None,
@@ -313,7 +315,7 @@ class OsvType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     vx: Optional[VelocityComponentType] = field(
         default=None,
@@ -322,7 +324,7 @@ class OsvType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     vy: Optional[VelocityComponentType] = field(
         default=None,
@@ -331,7 +333,7 @@ class OsvType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     vz: Optional[VelocityComponentType] = field(
         default=None,
@@ -340,7 +342,7 @@ class OsvType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     quality: Optional[str] = field(
         default=None,
@@ -349,7 +351,7 @@ class OsvType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
 
 
@@ -365,14 +367,14 @@ class ListOfOsvsType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "min_occurs": 1,
-        }
+        },
     )
     count: Optional[int] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -388,7 +390,7 @@ class OrbitChangeType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     cycle: Optional[CycleType] = field(
         default=None,
@@ -397,7 +399,7 @@ class OrbitChangeType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     time_of_anx: Optional[TimeOfAnxType] = field(
         default=None,
@@ -406,7 +408,7 @@ class OrbitChangeType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
 
 
@@ -422,12 +424,12 @@ class ListOfOrbitChangesType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "min_occurs": 1,
-        }
+        },
     )
     count: Optional[int] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

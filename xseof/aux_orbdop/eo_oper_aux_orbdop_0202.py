@@ -1,8 +1,13 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from .eo_oper_aux_orbdop_data_block_types_0201 import DorisPreliminaryDataBlockType
-from .eo_oper_aux_orbdop_header_types_0202 import DorisPreliminaryHeaderType
+
+from .eo_oper_aux_orbdop_data_block_types_0201 import (
+    DorisPreliminaryDataBlockType,
+)
+from .eo_oper_aux_orbdop_header_types_0202 import (
+    DorisPreliminaryHeaderType,
+)
 
 __NAMESPACE__ = "http://eop-cfi.esa.int/CFI"
 
@@ -19,7 +24,7 @@ class DorisPreliminaryFileType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     data_block: Optional[DorisPreliminaryDataBlockType] = field(
         default=None,
@@ -28,7 +33,7 @@ class DorisPreliminaryFileType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     schema_version: Optional[Decimal] = field(
         default=None,
@@ -36,7 +41,7 @@ class DorisPreliminaryFileType:
             "name": "schemaVersion",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 

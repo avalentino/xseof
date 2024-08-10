@@ -15,7 +15,7 @@ class AngleType:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     unit: str = field(
         init=False,
@@ -23,7 +23,7 @@ class AngleType:
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -37,7 +37,7 @@ class AnyTypeType:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )
 
 
@@ -50,7 +50,7 @@ class DistanceType:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     unit: str = field(
         init=False,
@@ -58,7 +58,7 @@ class DistanceType:
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -71,7 +71,7 @@ class FreqType:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     unit: str = field(
         init=False,
@@ -79,7 +79,7 @@ class FreqType:
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -102,18 +102,37 @@ class HeightType(DistanceType):
 
 
 @dataclass
+class ModelType:
+    class Meta:
+        name = "Model_Type"
+
+    value: Optional[RefractionModelType] = field(
+        default=None,
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass
+class RightAsc(AngleType):
+    class Meta:
+        name = "Right_Asc"
+
+
+@dataclass
 class RefractionType:
     class Meta:
         name = "Refraction_Type"
 
-    model: Optional[RefractionModelType] = field(
+    model: Optional[ModelType] = field(
         default=None,
         metadata={
             "name": "Model",
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     freq: Optional[FreqType] = field(
         default=None,
@@ -122,11 +141,5 @@ class RefractionType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
-
-
-@dataclass
-class RightAsc(AngleType):
-    class Meta:
-        name = "Right_Asc"

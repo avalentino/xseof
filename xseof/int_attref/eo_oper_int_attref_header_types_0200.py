@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
+
 from ..common.basic_types_0200 import AnyTypeType
 from ..common.header_types_0200 import FixedHeaderType
 
@@ -19,7 +20,7 @@ class AttitudeHeaderType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     variable_header: Optional[AnyTypeType] = field(
         default=None,
@@ -28,14 +29,14 @@ class AttitudeHeaderType:
             "type": "Element",
             "namespace": "http://eop-cfi.esa.int/CFI",
             "required": True,
-        }
+        },
     )
     schema_version: Optional[Decimal] = field(
         default=None,
         metadata={
             "name": "schemaVersion",
             "type": "Attribute",
-        }
+        },
     )
 
 
