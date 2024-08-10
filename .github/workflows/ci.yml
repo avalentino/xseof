@@ -1,50 +1,80 @@
-# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
-
-name: Python package
+name: CI
 
 on:
   push:
   pull_request:
+    branches: [ "main" ]
+  # schedule:
+  #   - cron: '2 1 3 * *'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  PACKAGE: xseof
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
+
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.8", "3.9", "3.10", "3.11"]
+        python-version: ["3.8", "3.x"]
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v3
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        python -m pip install flake8 build pytest pytest-cov
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Lint with flake8
-      run: |
-        # stop the build if there are Python syntax errors or undefined names
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=89 --statistics
-    - name: Build the package
-      run: |
-        python3 -m build --sdist --wheel
-    - name: Install the package
-      run: |
-        python3 -m pip install dist/xseof-*.whl
-    - name: Test with pytest
-      run: |
-        python3 -m pytest
-    - name: Install LXML
-      run: |
-        python3 -m pip install lxml
-    - name: Test coverage
-      run: |
-        python3 -m pytest --cov=xseof
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install build dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install build twine
+
+      - name: Build the package
+        run: |
+          python -m build
+          python -m twine check dist/*
+
+      - name: Install
+        run: |
+          python -m pip install dist/*.whl
+
+      - name: Install test dependencies
+        shell: bash
+        run: |
+          python -m pip install pytest pytest-cov
+          if [ -f requirements-test.txt ]; then pip install -r requirements-test.txt; fi
+
+      - name: Test
+        working-directory: dist
+        run: |
+          python -m pytest --cov=${PACKAGE} --cov-report=html --cov-report=term ../tests
+
+      - name: Install LXML
+        run: |
+          python -m pip install lxml
+
+      - name: Test with LXML
+        working-directory: dist
+        run: |
+          python -m pytest --cov=${PACKAGE} --cov-report=html --cov-report=term ../tests
+
+      - name: Install lint dependencies
+        run: |
+          python -m pip install flake8
+
+      - name: Lint with flake8
+        run: |
+          # stop the build if there are Python syntax errors or undefined names
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=89 --statistics
+
