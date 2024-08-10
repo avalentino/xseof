@@ -4,3 +4,4 @@ pytest
 pytest-cov
 tox
 flake8
+black
