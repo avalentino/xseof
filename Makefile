@@ -1,10 +1,9 @@
 #!/usr/bin/make -f
 
 PYTHON=python3
-SPHINX_APIDOC=sphinx-apidoc
 TARGET=xseof
 
-.PHONY: default help ext dist check fullcheck coverage lint api docs clean cleaner distclean
+.PHONY: default help dist check fullcheck coverage lint clean cleaner distclean update
 
 default: help
 
@@ -62,3 +61,7 @@ cleaner: clean
 
 distclean: cleaner
 	$(RM) -r dist
+
+update:
+	$(RM) xseof/*/[!_]*.py
+	sh tools/generate.sh
