@@ -1,12 +1,16 @@
 [flake8]
-max_line_length = 89
+max_line_length = 79
 # max-complexity = 10
 doctests = true
 # extend-ignore = E203,W503,D105,D107  # D* are in pyproject.toml
-extend-ignore = E203,W503,E501
+extend-ignore = E203,W503
 extend-select = W504
 per-file-ignores =
     tests/*: D
     */tests/*: D
+    xseof/common/header_types_*.py: E501
+    xseof/common/orbit_types_*.py: E501
+    xseof/int_attref/eo_oper_int_attref_data_block_types_*.py: E501
+
 statistics = True
 count = True

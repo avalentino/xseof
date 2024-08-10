@@ -66,3 +66,9 @@ readme = {file = ["README.rst", "NEWS.rst"]}
 
 [tool.pytest.ini_options]
 addopts = "--ignore=examples/"
+
+
+[tool.black]
+line-length = 79
+# target-version = ['py311']
+# extend-exclude = "packagename/parse/*"

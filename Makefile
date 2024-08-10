@@ -36,12 +36,10 @@ coverage:
 	$(PYTHON) -m pytest --cov=$(TARGET) --cov-report=html --cov-report=term
 
 lint:
-	# stop the build if there are Python syntax errors or undefined names
-	$(PYTHON) -m flake8 --count --statistics --select=E9,F63,F7,F82 --show-source .
-	# exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-	$(PYTHON) -m flake8 --count --statistics --exit-zero .
+	$(PYTHON) -m flake8 --count --statistics --select=E9,F63,F7,F82 --show-source $(TARGET) tests
+	$(PYTHON) -m flake8 --count --statistics $(TARGET) tests tools
 	# $(PYTHON) -m isort --check $(TARGET) tests
-	# $(PYTHON) -m black --check $(TARGET) tests
+	$(PYTHON) -m black --check $(TARGET) tests
 	# $(PYTHON) -m mypy --check-untyped-defs --ignore-missing-imports $(TARGET)
 	# ruff check $(TARGET)
 
