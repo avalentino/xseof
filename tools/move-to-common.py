@@ -49,7 +49,8 @@ def move_to_common(
             filename.unlink()
         else:
             print(f"move: {str(filename)!r} --> {str(new_path)!r}")
-            new_path.unlink()  # compatibility with windows
+            if new_path.exists():
+                new_path.unlink()  # compatibility with windows
             filename.rename(new_path)
 
     for filename in root.glob("*.py"):
